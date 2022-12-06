@@ -1,0 +1,21 @@
+uuid: d8048f8d-c95b-4466-b90b-9cd6300900ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.weather
+    - field.field.block_content.weather.field_weather
+id: block_content.weather.default
+targetEntityType: block_content
+bundle: weather
+mode: default
+content:
+  field_weather:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

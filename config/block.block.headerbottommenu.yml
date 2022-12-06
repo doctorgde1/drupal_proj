@@ -1,0 +1,25 @@
+uuid: 202644c7-6619-4dee-a34f-42f230930358
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-bottom-menu
+  module:
+    - system
+  theme:
+    - bartik
+id: headerbottommenu
+theme: bartik
+region: header
+weight: -1
+provider: null
+plugin: 'system_menu_block:header-bottom-menu'
+settings:
+  id: 'system_menu_block:header-bottom-menu'
+  label: 'Header bottom menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

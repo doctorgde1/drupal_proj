@@ -1,0 +1,25 @@
+uuid: 1271b32b-6d86-4458-9323-99632810acba
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-top
+  module:
+    - system
+  theme:
+    - bartik
+id: headertop
+theme: bartik
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:header-top'
+settings:
+  id: 'system_menu_block:header-top'
+  label: 'Header top menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
