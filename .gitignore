@@ -1,42 +1,118 @@
-# This file contains default .gitignore rules. To use it, copy it to .gitignore,
-# and it will cause files like your settings.php and user-uploaded files to be
-# excluded from Git version control. This is a common strategy to avoid
-# accidentally including private information in public repositories and patch
-# files.
+# Gitignore template for Drupal 9 projects.
 #
-# Because .gitignore can be specific to your site, this file has a different
-# name; updating Drupal core will not override your custom .gitignore file.
+# Earlier versions of Drupal are tracked in `community/PHP/`.
 
-# Ignore core when managing all of a project's dependencies with Composer
-# including Drupal core.
-# core
+# Ignore drupal core (if not versioning drupal sources)
+/private_files
+/vendor
+.gitattributes
+.htaccess
 
-# Ignore dependencies that are managed with Composer.
-# Generally you should only ignore the root vendor directory. It's important
-# that core/assets/vendor and any other vendor directories within contrib or
-# custom module, theme, etc., are not ignored unless you purposely do so.
-/vendor/
+web/core
+web/modules/README.txt
+web/themes/README.txt
+web/profiles/README.txt
+web/sites/README.txt
+web/sites/example.sites.php
+web/sites/example.settings.local.php
+web/sites/settings.local.php
+web/sites/development.services.yml
+web/.csslintrc
+web/.editorconfig
+web/.eslintignore
+web/.eslintrc.json
+web/.gitignore
+web/.htaccess
+web/autoload.php
+web/example.gitignore
+web/index.php
+web/LICENSE.txt
+web/README.txt
+web/robots.txt
+web/update.php
+web/web.config
 
-# Ignore configuration files that may contain sensitive information.
-/web/sites/*/settings*.php
-/web/sites/*/services*.yml
+# Ignore specific configuration
+config/ath_courts.import_courts.batch.yml
+
+# Ignore contrib modules and themes.
+web/modules/contrib/**
+web/themes/contrib/**
 
 # Ignore paths that contain user-generated content.
 /web/sites/*/files
 /web/sites/*/private
+/web/files/*
+/web/sites/default/settings.php
+/web/sites/default/services.yml
 
-# Ignore SimpleTest multi-site environment.
-web/sites/simpletest
+# Ignore paths that may contain temporary files
+/web/sites/*/translations
+/web/sites/*/tmp
+/web/sites/*/cache
 
-# If you prefer to store your .gitignore file in the sites/ folder, comment
-# or delete the previous settings and uncomment the following ones, instead.
+# Ignore configuration files that may contain sensitive information
+/web/sites/*/*settings*.php
+/web/sites/*/*services*.yml
 
-# Ignore configuration files that may contain sensitive information.
-# */settings*.php
+# Pantheon commits a settings.php for environment-specific settings.
+# Place local settings in settings.local.php
+/web/sites/*/settings.local.php
 
-# Ignore paths that contain user-generated content.
-# */files
-# */private
+# Note that services.local.yml is not loaded by default. If you would like
+# to use this file add the following to your settings.local.php file:
+#   $settings['container_yamls'][] = _DIR_ . '/services.local.yml';
+/web/sites/*/services.local.yml
 
-# Ignore SimpleTest multi-site environment.
-# simpletest
+# ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
+/web/sites/default/**/files
+/web/sites/default/**/private
+
+# Ignore testing related files
+/web/sites/simpletest
+
+# Packages #
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.bak
+
+# Logs and databases #
+*.log
+*.sql
+
+# OS generated files #
+.DS_Store*
+ehthumbs.db
+
+Thumbs.db
+._*
+
+# Vim generated files #
+*.un~
+
+# SASS #
+.sass-cache
+
+# Things in the core directory that Drupal 8 commits in the repository.
+!core/**/*.gz
+
+# Docker4Drupal filex
+.env
+docker-compose.yml
+mariadb-init
+
+# IDE files
+.idea
+.idea/*
+
+# Theme files
+node_modules
+/.editorconfig
