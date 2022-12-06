@@ -1,0 +1,8 @@
+uuid: 98449369-a2c5-47ea-adcf-b29400c19461
+langcode: en
+status: true
+dependencies: {  }
+id: advertisement
+label: 'Header Advertisement Image'
+revision: 0
+description: ''

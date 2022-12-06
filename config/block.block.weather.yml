@@ -1,0 +1,25 @@
+uuid: f1a1a1a2-b885-4b07-9dd4-fd10a2ff83bc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:weather:686be0fa-1422-403d-8701-c0e9d5bfa7bd'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: weather
+theme: bartik
+region: header
+weight: -6
+provider: null
+plugin: 'block_content:686be0fa-1422-403d-8701-c0e9d5bfa7bd'
+settings:
+  id: 'block_content:686be0fa-1422-403d-8701-c0e9d5bfa7bd'
+  label: Weather
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

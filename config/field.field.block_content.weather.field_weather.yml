@@ -1,0 +1,21 @@
+uuid: 3dd4cf72-ee1c-41c4-bc62-6777b7fccae4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.weather
+    - field.storage.block_content.field_weather
+id: block_content.weather.field_weather
+field_name: field_weather
+entity_type: block_content
+bundle: weather
+label: Weather
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '6.4 c New York'
+default_value_callback: ''
+settings: {  }
+field_type: string

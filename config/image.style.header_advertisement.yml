@@ -1,0 +1,15 @@
+uuid: c516f3e4-abcd-4ab1-a356-e637775bc23d
+langcode: en
+status: true
+dependencies: {  }
+name: header_advertisement
+label: 'Header Advertisement 728 x 90'
+effects:
+  f44a9769-6be2-46fc-9f71-c63cb1bacb1b:
+    uuid: f44a9769-6be2-46fc-9f71-c63cb1bacb1b
+    id: image_crop
+    weight: 1
+    data:
+      width: 728
+      height: 90
+      anchor: center-center
