@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_leave_a_reply
     - field.field.node.article.field_placeholder_paragraph_imag
     - field.field.node.article.field_placeholder_paragraph_text
+    - image.style.related_articles_230_x_275
     - node.type.article
   module:
     - image
@@ -20,7 +21,7 @@ mode: related_articles
 content:
   field_category:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -28,10 +29,10 @@ content:
     region: content
   field_placeholder_paragraph_imag:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: related_articles_230_x_275
     third_party_settings: {  }
     weight: 1
     region: content
