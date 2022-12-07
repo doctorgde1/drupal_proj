@@ -1,0 +1,15 @@
+uuid: 7b60487e-0039-45bb-9ece-12baff8e9fcd
+langcode: en
+status: true
+dependencies: {  }
+name: highlights_thumbnail_265_x_320
+label: 'Highlights Thumbnail 265 x 320'
+effects:
+  39d3804f-4790-40d4-992f-2914f31e768c:
+    uuid: 39d3804f-4790-40d4-992f-2914f31e768c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 265
+      height: 320
+      anchor: center-center
