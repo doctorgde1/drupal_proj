@@ -3,37 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.field_article_ima
-    - field.field.node.article.field_article_paragraph
     - node.type.article
   module:
-    - image
-    - text
     - user
 id: node.article.default
 targetEntityType: node
 bundle: article
 mode: default
-content:
-  field_article_ima:
-    type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
-    weight: 105
-    region: content
-  field_article_paragraph:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 104
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  links: true

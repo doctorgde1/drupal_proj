@@ -1,16 +1,16 @@
-uuid: 5c948b16-e74f-495c-a8ef-ba0c7c083d3a
+uuid: 65871a55-5dba-4ec0-8990-698eac5fbfd3
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.full
     - node.type.article
   module:
     - user
-id: node.article.teaser
+id: node.article.full
 targetEntityType: node
 bundle: article
-mode: teaser
+mode: full
 content:
   links:
     settings: {  }
