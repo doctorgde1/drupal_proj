@@ -3,14 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.field_article_ima
-    - field.field.node.article.field_article_paragraph
-    - image.style.thumbnail
     - node.type.article
   module:
-    - image
     - path
-    - text
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -21,22 +16,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_article_ima:
-    type: image_image
-    weight: 125
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_article_paragraph:
-    type: text_textarea
-    weight: 124
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
