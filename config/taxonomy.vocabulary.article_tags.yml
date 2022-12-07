@@ -1,0 +1,8 @@
+uuid: c79a8b3c-cd73-44df-be71-52d9b753018f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Article Tags'
+vid: article_tags
+description: ''
+weight: 0
