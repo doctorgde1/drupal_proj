@@ -1,0 +1,10 @@
+uuid: 93add30e-0ac3-43ea-a0ed-1475cb716f33
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.gadgets_thumbnail
+label: 'Gadgets Thumbnail'
+targetEntityType: node
+cache: true

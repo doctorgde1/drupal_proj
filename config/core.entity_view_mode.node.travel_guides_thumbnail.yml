@@ -1,0 +1,10 @@
+uuid: ae3000ac-687b-4d81-8a93-8aca8849d4f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.travel_guides_thumbnail
+label: 'Travel guides Thumbnail'
+targetEntityType: node
+cache: true

@@ -1,0 +1,10 @@
+uuid: 22b47a23-4843-41a4-8f3a-a9ff7f9d521d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.trending_now_thumbnail
+label: 'Trending Now Thumbnail'
+targetEntityType: node
+cache: true

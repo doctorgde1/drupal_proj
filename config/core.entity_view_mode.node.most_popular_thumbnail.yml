@@ -1,0 +1,10 @@
+uuid: 793c7687-3117-41f3-a473-18db18429e08
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.most_popular_thumbnail
+label: 'Most popular Thumbnail'
+targetEntityType: node
+cache: true

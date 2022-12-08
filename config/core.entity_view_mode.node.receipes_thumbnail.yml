@@ -1,0 +1,10 @@
+uuid: e023b426-131d-493b-a28d-2c56a2d82650
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.receipes_thumbnail
+label: 'Receipes Thumbnail'
+targetEntityType: node
+cache: true
