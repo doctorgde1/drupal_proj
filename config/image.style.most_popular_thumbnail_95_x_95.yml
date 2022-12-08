@@ -1,0 +1,15 @@
+uuid: 9e7ada36-c04e-4d3d-bb07-827f8ccae411
+langcode: en
+status: true
+dependencies: {  }
+name: most_popular_thumbnail_95_x_95
+label: 'Most popular Thumbnail 95 x 95'
+effects:
+  d63ada8e-5aab-4ec3-a8d3-c863373b2b0e:
+    uuid: d63ada8e-5aab-4ec3-a8d3-c863373b2b0e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 95
+      height: 95
+      anchor: center-center

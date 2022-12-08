@@ -1,0 +1,15 @@
+uuid: 90487247-7ea0-4d27-9da3-357f9937a0ce
+langcode: en
+status: true
+dependencies: {  }
+name: gaming_thumbnail_325_x_195
+label: 'Gaming Thumbnail 325 x 195'
+effects:
+  40882ae1-576f-450f-a169-89b04d33bee0:
+    uuid: 40882ae1-576f-450f-a169-89b04d33bee0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 325
+      height: 195
+      anchor: center-center

@@ -1,0 +1,15 @@
+uuid: 5fd93b12-a1d5-4905-8ecb-ae2521f5e687
+langcode: en
+status: true
+dependencies: {  }
+name: last_articles_thumbnail_335_x_200
+label: 'Last Articles Thumbnail 335 x 200'
+effects:
+  a9ef076d-e30a-47cd-9387-8fa8747a4a8c:
+    uuid: a9ef076d-e30a-47cd-9387-8fa8747a4a8c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 335
+      height: 200
+      anchor: center-center

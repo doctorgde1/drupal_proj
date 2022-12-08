@@ -1,0 +1,15 @@
+uuid: dc00d346-13d3-481e-867b-c4e1f58eb2e1
+langcode: en
+status: true
+dependencies: {  }
+name: gadgets_thumbnail_335_x_200
+label: 'Gadgets Thumbnail 335 x 200'
+effects:
+  ab2b2057-8eda-4fda-8dfc-9e68c7140dc8:
+    uuid: ab2b2057-8eda-4fda-8dfc-9e68c7140dc8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 335
+      height: 200
+      anchor: center-center

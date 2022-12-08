@@ -1,0 +1,15 @@
+uuid: 6adca033-c542-4cc7-a8c4-2fac672331e4
+langcode: en
+status: true
+dependencies: {  }
+name: receipes_thumbnail_335_x_200
+label: 'Receipes Thumbnail 335 x 200'
+effects:
+  bce06a8c-e0bf-4613-8ed6-ec429843eab2:
+    uuid: bce06a8c-e0bf-4613-8ed6-ec429843eab2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 335
+      height: 200
+      anchor: center-center
