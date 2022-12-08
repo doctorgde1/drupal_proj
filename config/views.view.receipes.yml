@@ -1,17 +1,21 @@
-uuid: d9d6305a-774a-4f8b-a847-2d4ac0c472ab
+uuid: 43feab24-7cac-4d5e-942a-d1454ee67ee8
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.most_popular_thumbnail
+    - core.entity_view_mode.node.receipes_thumbnail
+    - core.entity_view_mode.node.small_gadgets_thumbnail
+    - core.entity_view_mode.node.small_receipes_thumbnail
     - node.type.article
+    - taxonomy.vocabulary.categories
+  content:
+    - 'taxonomy_term:categories:e9c456b9-3066-4cac-93a7-36afd578c4ab'
   module:
     - node
-    - statistics
     - taxonomy
     - user
-id: most_popular
-label: 'Most popular'
+id: receipes
+label: Receipes
 module: views
 description: ''
 tag: ''
@@ -24,7 +28,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Most popular'
+      title: ''
       fields:
         title:
           id: title
@@ -33,35 +37,19 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
           plugin_id: field
           label: ''
           exclude: false
           alter:
             alter_text: false
-            text: ''
             make_link: false
-            path: ''
             absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            word_boundary: false
+            ellipsis: false
             strip_tags: false
             trim: false
-            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
@@ -92,14 +80,14 @@ display:
       pager:
         type: full
         options:
-          offset: 0
-          items_per_page: 5
-          total_pages: null
+          offset: 1
+          items_per_page: 2
+          total_pages: 0
           id: 0
           tags:
             next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
+            previous: ‹
+            first: ' '
             last: 'Last »'
           expose:
             items_per_page: false
@@ -128,20 +116,7 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        totalcount:
-          id: totalcount
-          table: node_counter
-          field: totalcount
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
+      sorts: {  }
       arguments: {  }
       filters:
         status:
@@ -161,15 +136,25 @@ display:
           id: type
           table: node_field_data
           field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
           entity_type: node
           entity_field: type
           plugin_id: bundle
-          operator: in
           value:
             article: article
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_category_target_id:
+          id: field_category_target_id
+          table: node__field_category
+          field: field_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 15
           group: 1
           exposed: false
           expose:
@@ -187,9 +172,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -202,10 +184,12 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+          reduce_duplicates: false
+          vid: categories
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: grid
         options:
@@ -221,7 +205,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: most_popular_thumbnail
+          view_mode: small_gadgets_thumbnail
       query:
         type: views_query
         options:
@@ -230,20 +214,12 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        field_category:
-          id: field_category
-          table: node__field_category
-          field: field_category
-          relationship: none
-          group_type: group
-          admin_label: 'field_category: Taxonomy term'
-          plugin_id: standard
-          required: false
+      relationships: {  }
       use_ajax: true
-      group_by: true
+      group_by: false
       header: {  }
       footer: {  }
+      hide_attachment_summary: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -251,6 +227,73 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  attachment_1:
+    id: attachment_1
+    display_title: Attachment
+    display_plugin: attachment
+    position: 2
+    display_options:
+      pager:
+        type: full
+        options:
+          offset: null
+          items_per_page: 1
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      sorts: {  }
+      style:
+        type: grid
+        options:
+          uses_fields: false
+          columns: 1
+          automatic_width: true
+          alignment: vertical
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: receipes_thumbnail
+      defaults:
+        style: false
+        row: false
+        relationships: false
+        sorts: false
+      relationships: {  }
+      display_extenders: {  }
+      displays:
+        block_1: block_1
+      inherit_exposed_filters: true
+      inherit_pager: false
+      render_pager: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -260,14 +303,59 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: Receipes
+      pager:
+        type: full
+        options:
+          offset: 1
+          items_per_page: 2
+          total_pages: 0
+          id: 0
+          tags:
+            next: ›
+            previous: ‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      style:
+        type: grid
+        options:
+          uses_fields: false
+          columns: 1
+          automatic_width: true
+          alignment: vertical
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: small_receipes_thumbnail
+      defaults:
+        title: false
+        hide_attachment_summary: false
+        pager: false
+        style: false
+        row: false
+      hide_attachment_summary: false
       display_extenders: {  }
-      block_description: 'Most Popular'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

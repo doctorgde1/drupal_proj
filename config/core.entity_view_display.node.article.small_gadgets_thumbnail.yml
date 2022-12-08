@@ -1,41 +1,33 @@
-uuid: e24877f6-7a72-48cc-9769-d3e696d2a1ea
+uuid: 06c5e316-02d9-4f5d-a241-891c78458b51
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.gadgets_thumbnail
+    - core.entity_view_mode.node.small_gadgets_thumbnail
     - field.field.node.article.field_article_tags
     - field.field.node.article.field_category
     - field.field.node.article.field_leave_a_reply
     - field.field.node.article.field_placeholder_paragraph_imag
     - field.field.node.article.field_placeholder_paragraph_text
-    - image.style.gadgets_thumbnail_335_x_200
+    - image.style.small_gadgets_thumbnail_100_x_
     - node.type.article
   module:
     - image
     - text
     - user
-id: node.article.gadgets_thumbnail
+id: node.article.small_gadgets_thumbnail
 targetEntityType: node
 bundle: article
-mode: gadgets_thumbnail
+mode: small_gadgets_thumbnail
 content:
-  field_category:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_placeholder_paragraph_imag:
     type: image
     label: hidden
     settings:
       image_link: content
-      image_style: gadgets_thumbnail_335_x_200
+      image_style: small_gadgets_thumbnail_100_x_
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_placeholder_paragraph_text:
     type: text_trimmed
@@ -43,9 +35,10 @@ content:
     settings:
       trim_length: 125
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
 hidden:
   field_article_tags: true
+  field_category: true
   field_leave_a_reply: true
   links: true

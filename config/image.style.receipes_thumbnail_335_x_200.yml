@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: receipes_thumbnail_335_x_200
-label: 'Receipes Thumbnail 335 x 200'
+label: 'Big Receipes Thumbnail 335 x 200'
 effects:
   bce06a8c-e0bf-4613-8ed6-ec429843eab2:
     uuid: bce06a8c-e0bf-4613-8ed6-ec429843eab2
