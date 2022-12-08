@@ -11,7 +11,7 @@ dependencies:
 id: views_block__related_articles_block_1
 theme: bartik
 region: content
-weight: 0
+weight: -4
 provider: null
 plugin: 'views_block:related_articles-block_1'
 settings:
