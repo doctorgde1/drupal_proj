@@ -1,0 +1,10 @@
+uuid: 496b72c2-7a9c-406e-82a8-04b9bef463b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.trending_now_thumbnail_small
+label: 'Trending Now Thumbnail Small'
+targetEntityType: node
+cache: true

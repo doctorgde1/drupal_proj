@@ -5,6 +5,6 @@ dependencies:
   module:
     - node
 id: node.trending_now_thumbnail
-label: 'Trending Now Thumbnail'
+label: 'Trending Now Thumbnail Categories'
 targetEntityType: node
 cache: true
