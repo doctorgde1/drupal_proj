@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: global_news_thumbnail_335_x_220
-label: 'Global news Thumbnail 335 x 220'
+label: 'Big Global news Thumbnail 335 x 220'
 effects:
   b0e6a4b7-4c0f-4f18-9a6f-1263603c0d86:
     uuid: b0e6a4b7-4c0f-4f18-9a6f-1263603c0d86

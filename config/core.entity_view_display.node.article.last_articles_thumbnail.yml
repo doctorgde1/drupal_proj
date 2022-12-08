@@ -25,7 +25,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_placeholder_paragraph_imag:
     type: image
@@ -34,7 +34,7 @@ content:
       image_link: content
       image_style: last_articles_thumbnail_335_x_200
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   field_article_tags: true

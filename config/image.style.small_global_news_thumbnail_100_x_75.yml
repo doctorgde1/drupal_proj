@@ -1,0 +1,15 @@
+uuid: d87b7b04-03c9-4fee-968a-f4ecc3c68a1d
+langcode: en
+status: true
+dependencies: {  }
+name: small_global_news_thumbnail_100_x_75
+label: 'Small Global news Thumbnail 100 x 75'
+effects:
+  b21b9b34-4966-4150-948a-88a80852f268:
+    uuid: b21b9b34-4966-4150-948a-88a80852f268
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 75
+      anchor: center-center
