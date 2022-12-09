@@ -1,0 +1,10 @@
+uuid: 24960cd8-b6c4-457e-82bf-49ac75594078
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.trending_now_thumbnail_big
+label: 'Trending Now Thumbnail Big'
+targetEntityType: node
+cache: true

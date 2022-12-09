@@ -1,0 +1,15 @@
+uuid: 2e8d0153-7f94-4999-aee6-3136c7a67ef5
+langcode: en
+status: true
+dependencies: {  }
+name: big_trending_now_thumbnail_530x445
+label: 'Big Trending Now Thumbnail 530 x 445'
+effects:
+  a479bcc0-e5d5-46a4-860b-7fbd2d58bc81:
+    uuid: a479bcc0-e5d5-46a4-860b-7fbd2d58bc81
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 530
+      height: 445
+      anchor: center-center

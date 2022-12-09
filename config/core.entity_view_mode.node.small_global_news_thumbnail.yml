@@ -1,0 +1,10 @@
+uuid: b085baa8-02f6-4378-b09f-e6460d88c781
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.small_global_news_thumbnail
+label: 'Small Global news Thumbnail'
+targetEntityType: node
+cache: true

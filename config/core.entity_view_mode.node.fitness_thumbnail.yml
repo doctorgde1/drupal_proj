@@ -1,0 +1,10 @@
+uuid: 6eac4f87-ced6-4b4d-a15d-a8b6a61024d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.fitness_thumbnail
+label: 'Fitness Thumbnail'
+targetEntityType: node
+cache: true

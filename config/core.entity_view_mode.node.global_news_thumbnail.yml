@@ -1,0 +1,10 @@
+uuid: 80582281-eb83-4925-9332-c935e4140184
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.global_news_thumbnail
+label: 'Big Global news Thumbnail'
+targetEntityType: node
+cache: true

@@ -1,0 +1,15 @@
+uuid: ddb16ffe-b3b6-4bc5-b9d5-86d97699ce3e
+langcode: en
+status: true
+dependencies: {  }
+name: small_trending_now_thumbnail_265_x_220
+label: 'Small Trending Now Thumbnail 265 x 220'
+effects:
+  ea1d0209-533d-49dd-9fb3-c056131f6ab3:
+    uuid: ea1d0209-533d-49dd-9fb3-c056131f6ab3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 265
+      height: 220
+      anchor: center-center
