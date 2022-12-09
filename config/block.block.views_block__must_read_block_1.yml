@@ -1,22 +1,22 @@
-uuid: 17c15c40-632a-4bc0-a1d3-749a60962472
+uuid: 79ac763b-6dfd-4e7d-aede-4a94190dcd90
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.lifestyle_related
+    - views.view.must_read
   module:
     - system
     - views
   theme:
     - bartik
-id: views_block__lifestyle_related_block_1
+id: views_block__must_read_block_1
 theme: bartik
 region: content
-weight: -9
+weight: 1
 provider: null
-plugin: 'views_block:lifestyle_related-block_1'
+plugin: 'views_block:must_read-block_1'
 settings:
-  id: 'views_block:lifestyle_related-block_1'
+  id: 'views_block:must_read-block_1'
   label: ''
   label_display: visible
   provider: views
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /category/lifestyle
+    pages: '<front>'

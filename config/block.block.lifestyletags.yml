@@ -12,7 +12,7 @@ dependencies:
 id: lifestyletags
 theme: bartik
 region: content
-weight: -12
+weight: -14
 provider: null
 plugin: 'block_content:1c84a9c3-d78c-48a5-9425-4a1d848d5b77'
 settings:
