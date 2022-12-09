@@ -1,0 +1,38 @@
+uuid: 43428ef0-4d3c-4146-b9b6-5dc7c9bf05e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_background
+    - field.storage.block_content.field_footer_background
+  module:
+    - image
+id: block_content.footer_background.field_footer_background
+field_name: field_footer_background
+entity_type: block_content
+bundle: footer_background
+label: 'Footer Background'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

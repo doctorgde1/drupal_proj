@@ -1,0 +1,15 @@
+uuid: ae7f0a30-acdf-4147-8248-c3b197e04241
+langcode: en
+status: true
+dependencies: {  }
+name: footer_background
+label: 'Footer Background 1165 x 415'
+effects:
+  1946c9d9-c31d-41fd-89e2-1de50d51d907:
+    uuid: 1946c9d9-c31d-41fd-89e2-1de50d51d907
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1165
+      height: 415
+      anchor: center-center
