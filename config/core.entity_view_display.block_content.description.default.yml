@@ -1,0 +1,22 @@
+uuid: dfa1291b-0994-41dd-bd40-93aa35880d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.description
+    - field.field.block_content.description.field_description
+  module:
+    - text
+id: block_content.description.default
+targetEntityType: block_content
+bundle: description
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

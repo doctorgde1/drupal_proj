@@ -1,0 +1,20 @@
+uuid: 68b98f72-142d-4b2e-a6c7-0e49edd7c76d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_copytight
+field_name: field_copytight
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

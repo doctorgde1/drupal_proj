@@ -1,0 +1,21 @@
+uuid: 807735d1-a12c-4d5d-af2f-98dffcc8e80a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copytight
+    - field.storage.block_content.field_copytight
+  module:
+    - text
+id: block_content.copytight.field_copytight
+field_name: field_copytight
+entity_type: block_content
+bundle: copytight
+label: Copytight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
