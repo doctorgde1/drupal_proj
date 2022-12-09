@@ -1,0 +1,21 @@
+uuid: 5926f18e-63a9-4587-a6f0-d596cd288de8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tags
+    - field.field.block_content.tags.field_tags
+id: block_content.tags.default
+targetEntityType: block_content
+bundle: tags
+mode: default
+content:
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
