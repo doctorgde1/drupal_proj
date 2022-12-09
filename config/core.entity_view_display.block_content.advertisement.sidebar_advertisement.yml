@@ -1,18 +1,20 @@
-uuid: a17fd783-08cd-48e9-aec7-26d6c107d19b
+uuid: 2544099c-1445-4387-9066-e24061cfa4b6
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.advertisement
+    - core.entity_view_mode.block_content.sidebar_advertisement
     - field.field.block_content.advertisement.field_advertisement
     - field.field.block_content.advertisement.field_advertisement_image
+    - image.style.sidebar_advertisement_300_x_2
   module:
     - image
     - link
-id: block_content.advertisement.default
+id: block_content.advertisement.sidebar_advertisement
 targetEntityType: block_content
 bundle: advertisement
-mode: default
+mode: sidebar_advertisement
 content:
   field_advertisement:
     type: link
@@ -28,10 +30,10 @@ content:
     region: content
   field_advertisement_image:
     type: image
-    label: inline
+    label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: sidebar_advertisement_300_x_2
     third_party_settings: {  }
     weight: 0
     region: content

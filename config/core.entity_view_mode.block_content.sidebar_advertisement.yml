@@ -1,0 +1,10 @@
+uuid: 378786a7-2d29-4e9f-a305-a5f00a82647a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.sidebar_advertisement
+label: 'Sidebar Advertisement'
+targetEntityType: block_content
+cache: true

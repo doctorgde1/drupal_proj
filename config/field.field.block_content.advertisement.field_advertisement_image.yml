@@ -11,7 +11,7 @@ id: block_content.advertisement.field_advertisement_image
 field_name: field_advertisement_image
 entity_type: block_content
 bundle: advertisement
-label: 'Header Advertisement Image'
+label: 'Advertisement Image'
 description: ''
 required: false
 translatable: false

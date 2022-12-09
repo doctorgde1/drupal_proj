@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: advertisement
-label: 'Header Advertisement Image'
+label: Advertisement
 revision: 0
 description: ''
