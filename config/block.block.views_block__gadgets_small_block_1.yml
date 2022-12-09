@@ -1,21 +1,21 @@
-uuid: a8d346c1-5279-4062-b903-0e0311df04cb
+uuid: ff692a4a-f752-4a03-8b88-7b6851a7b534
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.related_articles
+    - views.view.gadgets_small
   module:
     - views
   theme:
     - bartik
-id: views_block__related_articles_block_1
+id: views_block__gadgets_small_block_1
 theme: bartik
 region: content
-weight: -4
+weight: 0
 provider: null
-plugin: 'views_block:related_articles-block_1'
+plugin: 'views_block:gadgets_small-block_1'
 settings:
-  id: 'views_block:related_articles-block_1'
+  id: 'views_block:gadgets_small-block_1'
   label: ''
   label_display: visible
   provider: views

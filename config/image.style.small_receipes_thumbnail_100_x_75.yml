@@ -1,0 +1,15 @@
+uuid: 77867d1f-d0f2-450a-85d3-d07320394fb7
+langcode: en
+status: true
+dependencies: {  }
+name: small_receipes_thumbnail_100_x_75
+label: 'Small Receipes Thumbnail 100 x 75'
+effects:
+  edf7ac4b-5494-40d6-8ac4-a33b90dcd901:
+    uuid: edf7ac4b-5494-40d6-8ac4-a33b90dcd901
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 75
+      anchor: center-center

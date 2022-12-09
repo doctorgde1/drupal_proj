@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: last_articles_thumbnail_335_x_200
-label: 'Last Articles Thumbnail 335 x 200'
+label: 'Latest Articles Thumbnail 335 x 200'
 effects:
   a9ef076d-e30a-47cd-9387-8fa8747a4a8c:
     uuid: a9ef076d-e30a-47cd-9387-8fa8747a4a8c

@@ -1,43 +1,36 @@
-uuid: 9cee4a6e-ff50-4010-a24c-540059c1a438
+uuid: 47c4cc93-d2cf-4aea-926c-66d88036ec28
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.trending_now_thumbnail_small
+    - core.entity_view_mode.node.small_receipes_thumbnail
     - field.field.node.article.field_article_tags
     - field.field.node.article.field_category
     - field.field.node.article.field_leave_a_reply
     - field.field.node.article.field_placeholder_paragraph_imag
     - field.field.node.article.field_placeholder_paragraph_text
-    - image.style.small_trending_now_thumbnail_265_x_220
+    - image.style.small_receipes_thumbnail_100_x_75
     - node.type.article
   module:
     - image
     - user
-id: node.article.trending_now_thumbnail_small
+id: node.article.small_receipes_thumbnail
 targetEntityType: node
 bundle: article
-mode: trending_now_thumbnail_small
+mode: small_receipes_thumbnail
 content:
-  field_category:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_placeholder_paragraph_imag:
     type: image
     label: hidden
     settings:
       image_link: content
-      image_style: small_trending_now_thumbnail_265_x_220
+      image_style: small_receipes_thumbnail_100_x_75
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   field_article_tags: true
+  field_category: true
   field_leave_a_reply: true
   field_placeholder_paragraph_text: true
   links: true

@@ -1,0 +1,10 @@
+uuid: b891a651-7061-4dac-901a-7f8bad37f991
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.small_receipes_thumbnail
+label: 'Small Receipes Thumbnail'
+targetEntityType: node
+cache: true

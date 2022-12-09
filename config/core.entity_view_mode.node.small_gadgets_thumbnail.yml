@@ -1,0 +1,10 @@
+uuid: ca4a31f3-57d0-4f55-9cd3-42b698d4234d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.small_gadgets_thumbnail
+label: 'Small Gadgets Thumbnail'
+targetEntityType: node
+cache: true
