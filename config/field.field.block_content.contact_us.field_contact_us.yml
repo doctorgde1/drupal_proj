@@ -1,0 +1,21 @@
+uuid: 3f22e91e-ad36-49c2-b931-a3bcb96b9de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.storage.block_content.field_contact_us
+id: block_content.contact_us.field_contact_us
+field_name: field_contact_us
+entity_type: block_content
+bundle: contact_us
+label: 'Contact us'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: contact@yoursite.com
+default_value_callback: ''
+settings: {  }
+field_type: email

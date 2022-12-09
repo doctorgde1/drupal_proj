@@ -1,0 +1,29 @@
+uuid: 57289ee2-c4fa-4c04-b7ee-cba7611e40d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.field.block_content.contact_us.field_contact_us
+id: block_content.contact_us.default
+targetEntityType: block_content
+bundle: contact_us
+mode: default
+content:
+  field_contact_us:
+    type: email_default
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

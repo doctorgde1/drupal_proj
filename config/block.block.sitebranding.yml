@@ -1,4 +1,4 @@
-uuid: 9d530184-09a4-4e6a-ba1c-51b2661d6ae5
+uuid: fc9a9722-a5df-4124-8e1b-2aa04f49d7ea
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - system
   theme:
     - bartik
-_core:
-  default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
-id: bartik_branding
+id: sitebranding
 theme: bartik
-region: header
-weight: -3
+region: footer_fifth
+weight: -10
 provider: null
 plugin: system_branding_block
 settings:

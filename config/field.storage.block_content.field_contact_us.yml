@@ -1,0 +1,18 @@
+uuid: 23fd6c2d-0077-46c7-85f4-57c492679ab5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_contact_us
+field_name: field_contact_us
+entity_type: block_content
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: e88b4f1d-e9fd-4a4a-9b4d-989d1fbf0b63
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.description
+    - field.storage.block_content.field_description
+  module:
+    - text
+id: block_content.description.field_description
+field_name: field_description
+entity_type: block_content
+bundle: description
+label: Description
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: "<p>Newspaper is your news, entertainment, music fashion website. We provide you with the latest breaking news and videos straight from the entertainment industry. Fashion fades, only style remains the same. Fashion never stops. There are always projects, opportunities. Clothes mean nothing until someone lives in them.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

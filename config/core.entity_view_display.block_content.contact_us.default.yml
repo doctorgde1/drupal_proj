@@ -1,0 +1,20 @@
+uuid: 524bc950-ca09-483a-b725-38bf2d3c11cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.field.block_content.contact_us.field_contact_us
+id: block_content.contact_us.default
+targetEntityType: block_content
+bundle: contact_us
+mode: default
+content:
+  field_contact_us:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

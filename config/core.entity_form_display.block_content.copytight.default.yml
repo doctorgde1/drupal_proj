@@ -1,0 +1,31 @@
+uuid: 63c2ffe3-c0a9-40ff-9c16-6ceb0df5c4b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copytight
+    - field.field.block_content.copytight.field_copytight
+  module:
+    - text
+id: block_content.copytight.default
+targetEntityType: block_content
+bundle: copytight
+mode: default
+content:
+  field_copytight:
+    type: text_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
