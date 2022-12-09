@@ -1,0 +1,10 @@
+uuid: 6f0f9699-7839-439f-95bc-02d476851cfc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.gaming_thumbnail
+label: 'Gaming Thumbnail'
+targetEntityType: node
+cache: true

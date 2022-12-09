@@ -1,0 +1,43 @@
+uuid: 9cee4a6e-ff50-4010-a24c-540059c1a438
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.trending_now_thumbnail_small
+    - field.field.node.article.field_article_tags
+    - field.field.node.article.field_category
+    - field.field.node.article.field_leave_a_reply
+    - field.field.node.article.field_placeholder_paragraph_imag
+    - field.field.node.article.field_placeholder_paragraph_text
+    - image.style.small_trending_now_thumbnail_265_x_220
+    - node.type.article
+  module:
+    - image
+    - user
+id: node.article.trending_now_thumbnail_small
+targetEntityType: node
+bundle: article
+mode: trending_now_thumbnail_small
+content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_placeholder_paragraph_imag:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: small_trending_now_thumbnail_265_x_220
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_article_tags: true
+  field_leave_a_reply: true
+  field_placeholder_paragraph_text: true
+  links: true

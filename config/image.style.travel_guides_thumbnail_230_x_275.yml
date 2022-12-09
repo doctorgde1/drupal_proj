@@ -1,0 +1,15 @@
+uuid: 6ab10b6c-4934-4f09-ae0a-e08838025bcc
+langcode: en
+status: true
+dependencies: {  }
+name: travel_guides_thumbnail_230_x_275
+label: 'Travel guides Thumbnail 230 x 275'
+effects:
+  19788d04-c64d-4027-834c-729237be4a16:
+    uuid: 19788d04-c64d-4027-834c-729237be4a16
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 230
+      height: 275
+      anchor: center-center

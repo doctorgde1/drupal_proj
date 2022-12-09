@@ -1,0 +1,15 @@
+uuid: 1942c389-390d-4973-8aef-cd0544143142
+langcode: en
+status: true
+dependencies: {  }
+name: small_gadgets_thumbnail_100_x_
+label: 'Small Gadgets Thumbnail 100 x 75'
+effects:
+  c1c21d92-287d-4613-9259-8f37a8a98952:
+    uuid: c1c21d92-287d-4613-9259-8f37a8a98952
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 75
+      anchor: center-center

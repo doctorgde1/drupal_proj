@@ -1,0 +1,10 @@
+uuid: 34471d97-8b02-42b5-bf5d-557e96f476f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.last_articles_thumbnail
+label: 'Latest Articles Thumbnail'
+targetEntityType: node
+cache: true

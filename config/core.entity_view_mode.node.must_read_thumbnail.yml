@@ -1,0 +1,10 @@
+uuid: bfa1ba93-94fb-457e-a289-5c01f33b33d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.must_read_thumbnail
+label: 'Must Read Thumbnail'
+targetEntityType: node
+cache: true

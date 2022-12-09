@@ -1,0 +1,15 @@
+uuid: 26da8b58-d585-4da2-86be-fa5a63df5603
+langcode: en
+status: true
+dependencies: {  }
+name: global_news_thumbnail_335_x_220
+label: 'Big Global news Thumbnail 335 x 220'
+effects:
+  b0e6a4b7-4c0f-4f18-9a6f-1263603c0d86:
+    uuid: b0e6a4b7-4c0f-4f18-9a6f-1263603c0d86
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 335
+      height: 220
+      anchor: center-center
