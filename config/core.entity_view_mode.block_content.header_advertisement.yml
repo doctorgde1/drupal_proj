@@ -1,0 +1,10 @@
+uuid: b496ddc2-0f28-49f7-a040-711a0a85e0d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.header_advertisement
+label: 'Header Advertisement'
+targetEntityType: block_content
+cache: true

@@ -1,23 +1,25 @@
-uuid: 05ca1d70-82de-4983-a877-6f034a8516dc
+uuid: e97ccaa9-78f5-4c29-a1bc-e375d422466a
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.gaming_thumbnail
+    - core.entity_view_mode.node.category_related
     - node.type.article
     - taxonomy.vocabulary.categories
   content:
+    - 'taxonomy_term:categories:17ca9325-44b3-4d39-8872-002356cc9f81'
+    - 'taxonomy_term:categories:1dcecdac-a75e-4fd7-9efd-299b1552f7dd'
+    - 'taxonomy_term:categories:433c3f36-66f2-4dc0-b377-fda34f4a97d0'
+    - 'taxonomy_term:categories:5075e468-bc8b-4ce8-892f-31ad2ddc43fc'
     - 'taxonomy_term:categories:5e0dd564-e03a-4069-a8a9-01a5665d78f0'
-    - 'taxonomy_term:categories:8454ad36-0dcf-4859-814f-0170a892d446'
-    - 'taxonomy_term:categories:97834645-2070-40da-917c-ec3099a1ffb5'
-    - 'taxonomy_term:categories:c5129933-0a28-4ac6-a608-365a980e56ba'
     - 'taxonomy_term:categories:df7d27da-cac7-4046-9fbf-a1957143f16b'
+    - 'taxonomy_term:categories:e9c456b9-3066-4cac-93a7-36afd578c4ab'
   module:
     - node
     - taxonomy
     - user
-id: gaming
-label: Gaming
+id: lifestyle_related
+label: 'Lifestyle Related'
 module: views
 description: ''
 tag: ''
@@ -30,7 +32,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Gaming
+      title: ''
       fields:
         title:
           id: title
@@ -99,7 +101,7 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 1
+          items_per_page: 6
           total_pages: null
           id: 0
           tags:
@@ -134,7 +136,23 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: minute
       arguments: {  }
       filters:
         status:
@@ -203,33 +221,32 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
-          operator: and
+          operator: or
           value:
-            10: 10
-            14: 14
-            16: 16
-            9: 9
-            4: 4
+            - 2
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_category_target_id_op
+            operator_id: ''
             label: ''
             description: ''
             use_operator: false
-            operator: field_category_target_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_category_target_id
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -244,7 +261,7 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: categories
-          type: select
+          type: textfield
           hierarchy: false
           limit: true
           error_message: true
@@ -256,7 +273,7 @@ display:
         type: grid
         options:
           uses_fields: false
-          columns: 1
+          columns: 2
           automatic_width: true
           alignment: vertical
           row_class_custom: ''
@@ -267,7 +284,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: gaming_thumbnail
+          view_mode: category_related
       query:
         type: views_query
         options:
@@ -287,7 +304,7 @@ display:
           plugin_id: standard
           required: false
       use_ajax: true
-      group_by: false
+      group_by: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -296,7 +313,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - user
         - 'user.node_grants:view'
@@ -308,15 +324,13 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      display_description: ''
       display_extenders: {  }
-      block_description: Gaming
+      block_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - user
         - 'user.node_grants:view'

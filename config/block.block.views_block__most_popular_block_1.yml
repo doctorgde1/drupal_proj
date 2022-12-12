@@ -1,21 +1,21 @@
-uuid: a8d346c1-5279-4062-b903-0e0311df04cb
+uuid: ffa52bcc-5362-4736-be9f-664ba70032df
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.related_articles
+    - views.view.most_popular
   module:
     - views
   theme:
     - bartik
-id: views_block__related_articles_block_1
+id: views_block__most_popular_block_1
 theme: bartik
-region: content
-weight: -4
+region: sidebar_second
+weight: 0
 provider: null
-plugin: 'views_block:related_articles-block_1'
+plugin: 'views_block:most_popular-block_1'
 settings:
-  id: 'views_block:related_articles-block_1'
+  id: 'views_block:most_popular-block_1'
   label: ''
   label_display: visible
   provider: views

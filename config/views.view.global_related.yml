@@ -1,23 +1,24 @@
-uuid: 05ca1d70-82de-4983-a877-6f034a8516dc
+uuid: 6a363c03-b748-49e9-8c7f-0edf495d4e7f
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.gaming_thumbnail
+    - core.entity_view_mode.node.category_related
     - node.type.article
     - taxonomy.vocabulary.categories
   content:
-    - 'taxonomy_term:categories:5e0dd564-e03a-4069-a8a9-01a5665d78f0'
     - 'taxonomy_term:categories:8454ad36-0dcf-4859-814f-0170a892d446'
     - 'taxonomy_term:categories:97834645-2070-40da-917c-ec3099a1ffb5'
     - 'taxonomy_term:categories:c5129933-0a28-4ac6-a608-365a980e56ba'
-    - 'taxonomy_term:categories:df7d27da-cac7-4046-9fbf-a1957143f16b'
+    - 'taxonomy_term:categories:ca22db07-dd19-4cd3-bae1-9b9b35e1c710'
+    - 'taxonomy_term:categories:d6bbd54b-a70f-46db-8286-cb1d9854aac5'
+    - 'taxonomy_term:categories:f75bb890-4163-43a5-b98c-3aaeb19d9825'
   module:
     - node
     - taxonomy
     - user
-id: gaming
-label: Gaming
+id: global_related
+label: 'Global Related'
 module: views
 description: ''
 tag: ''
@@ -30,7 +31,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Gaming
+      title: ''
       fields:
         title:
           id: title
@@ -96,26 +97,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: full
+        type: some
         options:
           offset: 0
-          items_per_page: 1
-          total_pages: null
-          id: 0
-          tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
+          items_per_page: 6
       exposed_form:
         type: basic
         options:
@@ -134,7 +119,23 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: minute
       arguments: {  }
       filters:
         status:
@@ -203,33 +204,31 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
-          operator: and
+          operator: or
           value:
-            10: 10
-            14: 14
-            16: 16
-            9: 9
-            4: 4
+            - 1
+            - 10
+            - 4
+            - 9
+            - 5
+            - 3
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_category_target_id_op
+            operator_id: ''
             label: ''
             description: ''
             use_operator: false
-            operator: field_category_target_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_category_target_id
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -244,7 +243,7 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: categories
-          type: select
+          type: textfield
           hierarchy: false
           limit: true
           error_message: true
@@ -256,7 +255,7 @@ display:
         type: grid
         options:
           uses_fields: false
-          columns: 1
+          columns: 2
           automatic_width: true
           alignment: vertical
           row_class_custom: ''
@@ -267,7 +266,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: gaming_thumbnail
+          view_mode: category_related
       query:
         type: views_query
         options:
@@ -287,7 +286,7 @@ display:
           plugin_id: standard
           required: false
       use_ajax: true
-      group_by: false
+      group_by: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -296,8 +295,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -308,16 +305,13 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      display_description: ''
       display_extenders: {  }
-      block_description: Gaming
+      block_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions

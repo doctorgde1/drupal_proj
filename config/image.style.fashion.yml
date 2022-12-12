@@ -1,0 +1,15 @@
+uuid: 4fe13d9d-7e4d-434b-b2b3-a259693dff72
+langcode: en
+status: true
+dependencies: {  }
+name: fashion
+label: 'Fashion Thumbnail 265 x 215'
+effects:
+  303ce48b-49e7-48db-b4fc-17b00a6a1008:
+    uuid: 303ce48b-49e7-48db-b4fc-17b00a6a1008
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 265
+      height: 315
+      anchor: center-center
