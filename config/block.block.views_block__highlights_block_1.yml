@@ -1,0 +1,31 @@
+uuid: 6829eff9-70da-42f0-8e48-4d88f186a410
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.highlights
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__highlights_block_1
+theme: bartik
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:highlights-block_1'
+settings:
+  id: 'views_block:highlights-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping:
+    tid: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/\r\n/category/global\r\n/category/lifestyle"

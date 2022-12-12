@@ -1,0 +1,10 @@
+uuid: be133ff2-d288-47af-9b0b-e02d72a5bb2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.fashion_thumbnail
+label: 'Fashion Thumbnail'
+targetEntityType: node
+cache: true

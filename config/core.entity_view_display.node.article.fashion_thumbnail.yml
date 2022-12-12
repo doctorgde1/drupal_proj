@@ -1,0 +1,43 @@
+uuid: cc64c6d2-ca8f-4067-91e9-c7653f587378
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.fashion_thumbnail
+    - field.field.node.article.field_article_tags
+    - field.field.node.article.field_category
+    - field.field.node.article.field_leave_a_reply
+    - field.field.node.article.field_placeholder_paragraph_imag
+    - field.field.node.article.field_placeholder_paragraph_text
+    - image.style.fashion
+    - node.type.article
+  module:
+    - image
+    - user
+id: node.article.fashion_thumbnail
+targetEntityType: node
+bundle: article
+mode: fashion_thumbnail
+content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_placeholder_paragraph_imag:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: fashion
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_article_tags: true
+  field_leave_a_reply: true
+  field_placeholder_paragraph_text: true
+  links: true
