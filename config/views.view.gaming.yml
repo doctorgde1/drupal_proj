@@ -5,6 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.gaming_thumbnail
     - node.type.article
+    - taxonomy.vocabulary.categories
+  content:
+    - 'taxonomy_term:categories:5e0dd564-e03a-4069-a8a9-01a5665d78f0'
+    - 'taxonomy_term:categories:8454ad36-0dcf-4859-814f-0170a892d446'
+    - 'taxonomy_term:categories:97834645-2070-40da-917c-ec3099a1ffb5'
+    - 'taxonomy_term:categories:c5129933-0a28-4ac6-a608-365a980e56ba'
+    - 'taxonomy_term:categories:df7d27da-cac7-4046-9fbf-a1957143f16b'
   module:
     - node
     - taxonomy
@@ -127,20 +134,7 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        field_category_target_id:
-          id: field_category_target_id
-          table: node__field_category
-          field: field_category_target_id
-          relationship: none
-          group_type: count_distinct
-          admin_label: ''
-          plugin_id: standard
-          order: ASC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
+      sorts: {  }
       arguments: {  }
       filters:
         status:
@@ -201,6 +195,59 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_category_target_id:
+          id: field_category_target_id
+          table: node__field_category
+          field: field_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: and
+          value:
+            10: 10
+            14: 14
+            16: 16
+            9: 9
+            4: 4
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_category_target_id_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_category_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: categories
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -240,7 +287,7 @@ display:
           plugin_id: standard
           required: false
       use_ajax: true
-      group_by: true
+      group_by: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -249,7 +296,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -267,7 +316,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
