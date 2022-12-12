@@ -1,0 +1,31 @@
+uuid: b3c25f45-5b76-4eaf-a19b-4a68f7352b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tags
+    - field.field.block_content.tags.field_tags
+id: block_content.tags.default
+targetEntityType: block_content
+bundle: tags
+mode: default
+content:
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

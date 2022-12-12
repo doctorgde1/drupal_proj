@@ -1,0 +1,15 @@
+uuid: ecae00b5-5db1-416b-884f-3ff5115c1b90
+langcode: en
+status: true
+dependencies: {  }
+name: category_related_335_x_200
+label: 'Category Related 335 x 200'
+effects:
+  d38e339d-0db5-4b25-9256-836063205582:
+    uuid: d38e339d-0db5-4b25-9256-836063205582
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 335
+      height: 200
+      anchor: center-center

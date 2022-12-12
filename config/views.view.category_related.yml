@@ -1,20 +1,17 @@
-uuid: b3d4cde7-0b15-43ee-b6d6-d6887bae6b81
+uuid: e6f9f7a3-ceda-426c-833a-1400c9b7b378
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.highlights_thumbnail
-  content:
-    - 'block_content:tags:011c23d0-d73f-4a4f-8e83-5c0e13d6b8ca'
-    - 'block_content:tags:1c84a9c3-d78c-48a5-9425-4a1d848d5b77'
+    - core.entity_view_mode.node.category_related
   module:
     - node
     - taxonomy
     - user
 _core:
   default_config_hash: YKgw0f77GEmCu6_6Om9Mbig0mON9JdfVuMxTtd0WQaI
-id: highlights
-label: Highlights
+id: category_related
+label: 'Category Related'
 module: taxonomy
 description: 'Content belonging to a certain taxonomy term.'
 tag: default
@@ -32,7 +29,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 4
+          items_per_page: 6
       exposed_form:
         type: basic
         options:
@@ -206,9 +203,9 @@ display:
         type: grid
         options:
           uses_fields: false
-          columns: 4
+          columns: 2
           automatic_width: true
-          alignment: horizontal
+          alignment: vertical
           row_class_custom: ''
           row_class_default: true
           col_class_custom: ''
@@ -217,7 +214,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: highlights_thumbnail
+          view_mode: category_related
       query:
         type: views_query
         options:
@@ -259,114 +256,10 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      title: Highlights
       query:
         type: views_query
         options: {  }
-      defaults:
-        title: false
       display_extenders: {  }
-      block_description: Highlights
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_2:
-    id: block_2
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      title: 'Global News Highlights'
-      query:
-        type: views_query
-        options: {  }
-      defaults:
-        title: false
-        header: false
-      header:
-        entity_taxonomy_term:
-          id: entity_taxonomy_term
-          table: views
-          field: entity_taxonomy_term
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: true
-          target: '{{ raw_arguments.tid }}'
-          view_mode: full
-          tokenize: true
-          bypass_access: false
-        entity_block_content:
-          id: entity_block_content
-          table: views
-          field: entity_block_content
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: false
-          target: 011c23d0-d73f-4a4f-8e83-5c0e13d6b8ca
-          view_mode: default
-          tokenize: true
-          bypass_access: false
-      display_extenders: {  }
-      block_description: 'Global News Highlights'
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_3:
-    id: block_3
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      title: 'Lifestyle Highlights'
-      query:
-        type: views_query
-        options: {  }
-      defaults:
-        title: false
-        header: false
-      header:
-        entity_taxonomy_term:
-          id: entity_taxonomy_term
-          table: views
-          field: entity_taxonomy_term
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: true
-          target: '{{ raw_arguments.tid }}'
-          view_mode: full
-          tokenize: true
-          bypass_access: false
-        entity_block_content:
-          id: entity_block_content
-          table: views
-          field: entity_block_content
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: false
-          target: 1c84a9c3-d78c-48a5-9425-4a1d848d5b77
-          view_mode: default
-          tokenize: true
-          bypass_access: false
-      display_extenders: {  }
-      block_description: 'Lifestyle Highlights'
     cache_metadata:
       max-age: -1
       contexts:
