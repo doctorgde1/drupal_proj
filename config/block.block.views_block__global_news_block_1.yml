@@ -1,22 +1,22 @@
-uuid: e5c854cb-c32f-4e0d-9c1e-71cb75839fa5
+uuid: 931eabf3-ff99-479b-8ce4-d0f841d52642
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.gadgets_small
+    - views.view.global_news
   module:
     - system
     - views
   theme:
     - bartik
-id: views_block__gadgets_small_block_1
+id: views_block__global_news_block_1
 theme: bartik
 region: content
-weight: -5
+weight: -7
 provider: null
-plugin: 'views_block:gadgets_small-block_1'
+plugin: 'views_block:global_news-block_1'
 settings:
-  id: 'views_block:gadgets_small-block_1'
+  id: 'views_block:global_news-block_1'
   label: ''
   label_display: visible
   provider: views
