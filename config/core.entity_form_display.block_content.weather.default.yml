@@ -4,19 +4,19 @@ status: true
 dependencies:
   config:
     - block_content.type.weather
-    - field.field.block_content.weather.field_weather
+    - field.field.block_content.weather.field_check_weate
+  module:
+    - city_weather_field
 id: block_content.weather.default
 targetEntityType: block_content
 bundle: weather
 mode: default
 content:
-  field_weather:
-    type: string_textfield
-    weight: 26
+  field_check_weate:
+    type: weather_widget
+    weight: 27
     region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   info:
     type: string_textfield

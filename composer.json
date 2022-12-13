@@ -16,12 +16,15 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/city_weather_field": "^3.0",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/custom_breadcrumbs": "^1.0",
+        "drupal/ipma_weather": "^1.4",
         "drupal/paragraphs": "^1.15",
-        "drupal/pathauto": "^1.11"
+        "drupal/pathauto": "^1.11",
+        "drupal/weather-weather": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
