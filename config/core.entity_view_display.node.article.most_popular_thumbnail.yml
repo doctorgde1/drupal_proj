@@ -33,10 +33,13 @@ content:
     settings:
       image_link: content
       image_style: most_popular_thumbnail_95_x_95
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 1
     region: content
 hidden:
+  breadcrumbs: true
   field_article_tags: true
   field_leave_a_reply: true
   field_placeholder_paragraph_text: true

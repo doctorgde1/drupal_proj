@@ -12,10 +12,11 @@ mode: default
 content:
   field_weather:
     type: string
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  breadcrumbs: true
