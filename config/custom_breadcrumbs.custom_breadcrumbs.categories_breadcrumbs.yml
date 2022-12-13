@@ -1,0 +1,15 @@
+uuid: 4893f48e-a3d5-4ab1-9167-90f4ae8365a4
+langcode: en
+status: true
+dependencies: {  }
+id: categories_breadcrumbs
+label: 'Lifestyle Categories breadcrumbs'
+description: ''
+entityType: taxonomy_term
+entityBundle: categories
+language: en
+breadcrumbPaths: "/category/lifestyle/\r\n<nolink>"
+breadcrumbTitles: "Lifestyle\r\n[current-page:title]"
+type: '2'
+pathPattern: "/category/lifestyle/*\r\n"
+extraCacheContexts: ''

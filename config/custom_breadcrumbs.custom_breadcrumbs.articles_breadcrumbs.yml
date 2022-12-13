@@ -1,0 +1,15 @@
+uuid: 43c67715-3969-4d5c-ac6e-c79c1bac8ac2
+langcode: en
+status: true
+dependencies: {  }
+id: articles_breadcrumbs
+label: 'Articles Breadcrumbs'
+description: ''
+entityType: node
+entityBundle: article
+language: en
+breadcrumbPaths: '<nolink>'
+breadcrumbTitles: '[node:field_category:0:entity]'
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''
