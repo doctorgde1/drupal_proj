@@ -1,0 +1,15 @@
+uuid: 1e366313-0c16-470c-a61c-ee1486b0a49c
+langcode: en
+status: true
+dependencies: {  }
+id: general_categories
+label: 'General Categories'
+description: ''
+entityType: _none
+entityBundle: _none
+language: und
+breadcrumbPaths: '<nolink>'
+breadcrumbTitles: '[current-page:title]'
+type: '2'
+pathPattern: '/category/*'
+extraCacheContexts: ''
