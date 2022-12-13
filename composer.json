@@ -24,6 +24,7 @@
         "drupal/ipma_weather": "^1.4",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
+        "drupal/views_infinite_scroll": "^2.0",
         "drupal/weather-weather": "^2.0"
     },
     "conflict": {
