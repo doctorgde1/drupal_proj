@@ -1,20 +1,20 @@
-uuid: 637076e4-b566-482d-8590-590f0c0b6ced
+uuid: ad674d36-a9e9-41a0-8361-9422ae5108a1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_placeholder_paragraph_imag
-    - node.type.article
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.image
   module:
     - image
-id: node.article.field_placeholder_paragraph_imag
-field_name: field_placeholder_paragraph_imag
-entity_type: node
-bundle: article
-label: 'Placeholder Paragraph Image'
+id: paragraph.image.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: image
+label: Image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

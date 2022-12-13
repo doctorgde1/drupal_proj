@@ -1,0 +1,21 @@
+uuid: 5bcf46e5-a02d-4cb5-b34a-69337818edd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic
+    - paragraphs.paragraphs_type.photo_with_text
+  module:
+    - text
+id: paragraph.photo_with_text.field_topic
+field_name: field_topic
+entity_type: paragraph
+bundle: photo_with_text
+label: Topic
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

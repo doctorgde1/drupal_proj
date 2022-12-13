@@ -1,16 +1,16 @@
-uuid: b0bf7876-d0f3-475c-b78e-98b21be415bb
+uuid: ba63348c-fc49-47dd-829b-b822a62c4364
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.last_articles_thumbnail
+    - core.entity_view_mode.node.most_popular_thumbnail
     - node.type.article
   module:
     - node
     - taxonomy
     - user
-id: latest_articles
-label: 'Latest Articles'
+id: latest_articles_sidebar
+label: 'Latest Articles Sidebar'
 module: views
 description: ''
 tag: ''
@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Latest Articles Front'
+      title: 'Latest Articles Sidebar'
       fields:
         title:
           id: title
@@ -92,7 +92,7 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 6
+          items_per_page: 5
           total_pages: null
           id: 0
           tags:
@@ -133,7 +133,7 @@ display:
           table: node_field_data
           field: created
           relationship: none
-          group_type: group
+          group_type: count_distinct
           admin_label: ''
           entity_type: node
           entity_field: created
@@ -143,7 +143,7 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: minute
+          granularity: second
       arguments: {  }
       filters:
         status:
@@ -211,8 +211,8 @@ display:
       style:
         type: grid
         options:
-          uses_fields: false
-          columns: 2
+          uses_fields: true
+          columns: 1
           automatic_width: true
           alignment: vertical
           row_class_custom: ''
@@ -223,7 +223,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: last_articles_thumbnail
+          view_mode: most_popular_thumbnail
       query:
         type: views_query
         options:
@@ -263,7 +263,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Latest Articles Front'
+      block_description: 'Latest Articles Sidebar'
     cache_metadata:
       max-age: -1
       contexts:
