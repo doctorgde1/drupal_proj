@@ -240,7 +240,7 @@ display:
       pager:
         type: full
         options:
-          offset: null
+          offset: 1
           items_per_page: 1
           total_pages: null
           id: 0
@@ -258,7 +258,23 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: minute
       style:
         type: grid
         options:
@@ -307,7 +323,7 @@ display:
       pager:
         type: full
         options:
-          offset: 1
+          offset: 2
           items_per_page: 2
           total_pages: 0
           id: 0
@@ -325,6 +341,23 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: minute
       style:
         type: grid
         options:
@@ -347,6 +380,7 @@ display:
         pager: false
         style: false
         row: false
+        sorts: false
       hide_attachment_summary: false
       display_extenders: {  }
     cache_metadata:
