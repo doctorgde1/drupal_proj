@@ -7,7 +7,6 @@ dependencies:
     - node.type.article
   module:
     - node
-    - taxonomy
     - user
 id: latest_articles_sidebar
 label: 'Latest Articles Sidebar'
@@ -232,18 +231,9 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        field_category:
-          id: field_category
-          table: node__field_category
-          field: field_category
-          relationship: none
-          group_type: group
-          admin_label: 'field_category: Taxonomy term'
-          plugin_id: standard
-          required: false
+      relationships: {  }
       use_ajax: true
-      group_by: true
+      group_by: false
       header: {  }
       footer: {  }
       display_extenders: {  }
