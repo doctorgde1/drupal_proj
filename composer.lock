@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ce02fb34be5a32d7c2ebd626da79cd5",
+    "content-hash": "8eb1a2e5a87ec2c2e78b885613e2fcfc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -520,6 +520,56 @@
             },
             "abandoned": "roave/better-reflection",
             "time": "2022-05-31T18:46:25+00:00"
+        },
+        {
+            "name": "drupal/city_weather_field",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/city_weather_field.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/city_weather_field-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "454f128a442f0b967f62104b10baf0c0a15c4963"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1666286019",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mohamed Anis Taktak (matio89)",
+                    "homepage": "https://www.drupal.org/u/matio89",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This module allows to return the weather of a US City.",
+            "homepage": "https://www.drupal.org/project/city_weather_field",
+            "keywords": [
+                "Drupal",
+                "Weather"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/city_weather_field",
+                "issues": "https://www.drupal.org/project/issues/city_weather_field"
+            }
         },
         {
             "name": "drupal/core",
@@ -1090,6 +1140,54 @@
             }
         },
         {
+            "name": "drupal/ipma_weather",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ipma_weather.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ipma_weather-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "92b754e7f692ee1bcc68ec66d4057c5aa2d6b06d"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1666205972",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "jmauricio",
+                    "homepage": "https://www.drupal.org/user/274084"
+                }
+            ],
+            "description": "IPMA Weather",
+            "homepage": "https://www.drupal.org/project/ipma_weather",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/ipma_weather",
+                "issues": "https://www.drupal.org/project/issues/ipma_weather"
+            }
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "1.15.0",
             "source": {
@@ -1304,6 +1402,116 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/views_infinite_scroll",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c57a2c63f00c53a9ee7e741c7f37df21eb9e76de"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1664716655",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Honza Pobořil",
+                    "homepage": "https://www.drupal.org/user/123612"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "Remon",
+                    "homepage": "https://www.drupal.org/user/143827"
+                },
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "A pager which allows an infinite scroll effect for views.",
+            "homepage": "https://www.drupal.org/project/views_infinite_scroll",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_infinite_scroll"
+            }
+        },
+        {
+            "name": "drupal/weather-weather",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/weather.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/weather-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "199bb5bfe4234d73c04f479a3aee20816db5d729"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/block-block": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1633683828",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "tarasich",
+                    "homepage": "https://www.drupal.org/user/2901135"
+                },
+                {
+                    "name": "toddy",
+                    "homepage": "https://www.drupal.org/user/62716"
+                },
+                {
+                    "name": "ysamoylenko",
+                    "homepage": "https://www.drupal.org/user/3554629"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/weather",
+            "support": {
+                "source": "https://git.drupalcode.org/project/weather"
             }
         },
         {
