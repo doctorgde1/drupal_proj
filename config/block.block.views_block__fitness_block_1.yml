@@ -12,7 +12,7 @@ dependencies:
 id: views_block__fitness_block_1
 theme: bartik
 region: content
-weight: -2
+weight: -4
 provider: null
 plugin: 'views_block:fitness-block_1'
 settings:

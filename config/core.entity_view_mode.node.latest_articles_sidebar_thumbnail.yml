@@ -1,0 +1,10 @@
+uuid: 679bbf18-e32e-4edb-8f5f-b090729461f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.latest_articles_sidebar_thumbnail
+label: 'Latest Articles Sidebar Thumbnail'
+targetEntityType: node
+cache: true

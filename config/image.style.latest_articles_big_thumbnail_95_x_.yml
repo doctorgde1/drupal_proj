@@ -1,0 +1,15 @@
+uuid: 7dbb6a6f-3a0d-4484-9053-8f979938fbc5
+langcode: en
+status: true
+dependencies: {  }
+name: latest_articles_big_thumbnail_95_x_
+label: 'Latest Articles Small Thumbnail 95 x 95'
+effects:
+  eb125633-ad6d-426c-bdb9-43ea9dc77e58:
+    uuid: eb125633-ad6d-426c-bdb9-43ea9dc77e58
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 95
+      height: 95
+      anchor: center-center

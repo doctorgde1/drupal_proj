@@ -1,0 +1,21 @@
+uuid: 76093b72-2850-4746-a9d7-653f9b8b9655
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_after
+    - paragraphs.paragraphs_type.text_photo_text
+  module:
+    - text
+id: paragraph.text_photo_text.field_text_after
+field_name: field_text_after
+entity_type: paragraph
+bundle: text_photo_text
+label: 'Text After'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

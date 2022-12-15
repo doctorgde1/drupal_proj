@@ -1,0 +1,21 @@
+uuid: e10e07f9-66bf-4559-aea6-27c354061946
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_before
+    - paragraphs.paragraphs_type.text_image
+  module:
+    - text
+id: paragraph.text_image.field_text_before
+field_name: field_text_before
+entity_type: paragraph
+bundle: text_image
+label: 'Text Before'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

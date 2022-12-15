@@ -1,0 +1,44 @@
+uuid: 9b086ef1-19fd-4da3-8fba-0e070d19bf12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photo_with_text.field_image
+    - field.field.paragraph.photo_with_text.field_text
+    - field.field.paragraph.photo_with_text.field_topic
+    - paragraphs.paragraphs_type.photo_with_text
+  module:
+    - image
+    - text
+id: paragraph.photo_with_text.default
+targetEntityType: paragraph
+bundle: photo_with_text
+mode: default
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_topic:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true

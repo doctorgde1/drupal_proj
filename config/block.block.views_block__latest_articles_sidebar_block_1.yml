@@ -1,0 +1,29 @@
+uuid: da7488c9-4168-4d91-aab7-ec8e38747c6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_articles_sidebar
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__latest_articles_sidebar_block_1
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_articles_sidebar-block_1'
+settings:
+  id: 'views_block:latest_articles_sidebar-block_1'
+  label: 'Latest Articles'
+  label_display: visible
+  provider: views
+  views_label: 'Latest Articles'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

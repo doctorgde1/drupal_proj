@@ -14,11 +14,12 @@ mode: default
 content:
   field_date:
     type: datetime_custom
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
       date_format: 'l, F j, o'
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  breadcrumbs: true

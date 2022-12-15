@@ -120,7 +120,7 @@ display:
           table: node_counter
           field: daycount
           relationship: none
-          group_type: group
+          group_type: count_distinct
           admin_label: ''
           plugin_id: standard
           order: DESC
@@ -266,7 +266,7 @@ display:
       pager:
         type: some
         options:
-          offset: 0
+          offset: 1
           items_per_page: 4
       style:
         type: grid
@@ -285,8 +285,10 @@ display:
           relationship: none
           view_mode: trending_now_thumbnail_small
       defaults:
+        group_by: false
         style: false
         row: false
+      group_by: false
       display_extenders: {  }
       displays:
         block_1: block_1

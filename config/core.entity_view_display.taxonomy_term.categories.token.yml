@@ -1,0 +1,23 @@
+uuid: cb2de3ce-0a5f-478b-996e-fc77495db877
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - taxonomy.vocabulary.categories
+  module:
+    - text
+id: taxonomy_term.categories.token
+targetEntityType: taxonomy_term
+bundle: categories
+mode: token
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true

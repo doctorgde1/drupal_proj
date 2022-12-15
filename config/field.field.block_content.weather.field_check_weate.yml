@@ -1,0 +1,23 @@
+uuid: 4fc17aee-66c7-4d34-bfa0-6a828b0a62e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.weather
+    - field.storage.block_content.field_check_weate
+  module:
+    - city_weather_field
+id: block_content.weather.field_check_weate
+field_name: field_check_weate
+entity_type: block_content
+bundle: weather
+label: Weather
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: weather_field_type

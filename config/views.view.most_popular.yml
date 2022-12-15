@@ -209,7 +209,7 @@ display:
       style:
         type: grid
         options:
-          uses_fields: false
+          uses_fields: true
           columns: 1
           automatic_width: true
           alignment: vertical

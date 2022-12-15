@@ -6,9 +6,10 @@ dependencies:
     - core.entity_view_mode.node.category_related
     - field.field.node.article.field_article_tags
     - field.field.node.article.field_category
+    - field.field.node.article.field_content
     - field.field.node.article.field_leave_a_reply
-    - field.field.node.article.field_placeholder_paragraph_imag
-    - field.field.node.article.field_placeholder_paragraph_text
+    - field.field.node.article.field_preview_image
+    - field.field.node.article.field_teaser_text
     - image.style.category_related_335_x_200
     - node.type.article
   module:
@@ -27,17 +28,21 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_placeholder_paragraph_imag:
+  field_preview_image:
     type: image
     label: hidden
     settings:
       image_link: content
       image_style: category_related_335_x_200
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  breadcrumbs: true
   field_article_tags: true
+  field_content: true
   field_leave_a_reply: true
-  field_placeholder_paragraph_text: true
+  field_teaser_text: true
   links: true
