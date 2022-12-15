@@ -7,8 +7,7 @@ dependencies:
     - node.type.article
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.photo_with_text
-    - paragraphs.paragraphs_type.text_image
-    - paragraphs.paragraphs_type.text_photo_text
+    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 id: node.article.field_content
@@ -25,10 +24,9 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      text_image: text_image
       image: image
+      text: text
       photo_with_text: photo_with_text
-      text_photo_text: text_photo_text
     negate: 0
     target_bundles_drag_drop:
       image:
@@ -37,10 +35,7 @@ settings:
       photo_with_text:
         weight: 7
         enabled: true
-      text_image:
-        weight: 5
-        enabled: true
-      text_photo_text:
-        weight: 8
+      text:
+        weight: 6
         enabled: true
 field_type: entity_reference_revisions

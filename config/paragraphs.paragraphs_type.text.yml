@@ -1,9 +1,9 @@
-uuid: 44d72a00-4b74-4a79-8100-5607fb9becfe
+uuid: 37eb74a1-b766-4527-b4df-d9832e3e9bfa
 langcode: en
 status: true
 dependencies: {  }
-id: text_image
-label: 'Text Photo'
+id: text
+label: Text
 icon_uuid: null
 icon_default: null
 description: ''

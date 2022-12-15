@@ -1,16 +1,16 @@
-uuid: c68d84c0-5403-47b6-aab0-43a4e6694cf6
+uuid: 6b794697-2288-49a7-9295-6f5af6bbf755
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_topic
-    - paragraphs.paragraphs_type.text_photo_text
+    - paragraphs.paragraphs_type.text
   module:
     - text
-id: paragraph.text_photo_text.field_topic
+id: paragraph.text.field_topic
 field_name: field_topic
 entity_type: paragraph
-bundle: text_photo_text
+bundle: text
 label: Topic
 description: ''
 required: false
