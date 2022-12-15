@@ -11,7 +11,7 @@ dependencies:
 id: sidebaradvertisement
 theme: bartik
 region: sidebar_second
-weight: 0
+weight: -16
 provider: null
 plugin: 'block_content:4f14aa0d-ef34-40e1-a646-3718491dd7e5'
 settings:

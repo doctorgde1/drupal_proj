@@ -12,7 +12,7 @@ dependencies:
 id: views_block__latest_articles_sidebar_block_1
 theme: bartik
 region: sidebar_second
-weight: 0
+weight: -15
 provider: null
 plugin: 'views_block:latest_articles_sidebar-block_1'
 settings:
