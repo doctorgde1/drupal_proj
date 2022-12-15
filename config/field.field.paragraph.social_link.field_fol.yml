@@ -1,0 +1,21 @@
+uuid: a30533c4-a6a3-4bca-a170-dbd77ab0525b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fol
+    - paragraphs.paragraphs_type.social_link
+  module:
+    - text
+id: paragraph.social_link.field_fol
+field_name: field_fol
+entity_type: paragraph
+bundle: social_link
+label: Followers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
