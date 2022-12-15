@@ -255,22 +255,9 @@ display:
       pager:
         type: some
         options:
-          offset: null
-          items_per_page: 4
-      sorts:
-        field_category_target_id:
-          id: field_category_target_id
-          table: node__field_category
-          field: field_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
+          offset: 0
+          items_per_page: 1
+      sorts: {  }
       style:
         type: grid
         options:
@@ -286,17 +273,19 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: small_global_news_thumbnail
+          view_mode: global_news_thumbnail
       defaults:
+        group_by: false
         style: false
         row: false
         relationships: false
         sorts: false
       relationships: {  }
+      group_by: false
       display_extenders: {  }
       displays:
         block_1: block_1
-      attachment_position: after
+      attachment_position: before
       inherit_exposed_filters: true
       inherit_pager: false
       render_pager: false
@@ -320,8 +309,8 @@ display:
       pager:
         type: some
         options:
-          offset: 0
-          items_per_page: 1
+          offset: 1
+          items_per_page: 4
       style:
         type: grid
         options:
@@ -337,7 +326,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: global_news_thumbnail
+          view_mode: small_global_news_thumbnail
       defaults:
         title: false
         hide_attachment_summary: false
