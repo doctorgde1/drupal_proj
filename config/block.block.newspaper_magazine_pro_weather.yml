@@ -1,0 +1,25 @@
+uuid: 7c81a11a-2314-4330-9fc7-78ceb1978419
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:weather:686be0fa-1422-403d-8701-c0e9d5bfa7bd'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_weather
+theme: newspaper_magazine_pro
+region: header
+weight: -6
+provider: null
+plugin: 'block_content:686be0fa-1422-403d-8701-c0e9d5bfa7bd'
+settings:
+  id: 'block_content:686be0fa-1422-403d-8701-c0e9d5bfa7bd'
+  label: Weather
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

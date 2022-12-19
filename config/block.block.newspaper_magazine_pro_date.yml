@@ -1,0 +1,25 @@
+uuid: 4ede9edb-6296-4832-a155-2ee74335288e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:date:7e54a253-65e7-4231-a7b4-28f3162bc945'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_date
+theme: newspaper_magazine_pro
+region: header
+weight: -5
+provider: null
+plugin: 'block_content:7e54a253-65e7-4231-a7b4-28f3162bc945'
+settings:
+  id: 'block_content:7e54a253-65e7-4231-a7b4-28f3162bc945'
+  label: Date
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

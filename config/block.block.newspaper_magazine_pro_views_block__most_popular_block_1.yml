@@ -1,4 +1,4 @@
-uuid: ffa52bcc-5362-4736-be9f-664ba70032df
+uuid: aed1b938-67e3-455c-8d38-f588a4c6c3e1
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - system
     - views
   theme:
-    - bartik
-id: views_block__most_popular_block_1
-theme: bartik
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__most_popular_block_1
+theme: newspaper_magazine_pro
 region: sidebar_second
 weight: -14
 provider: null
