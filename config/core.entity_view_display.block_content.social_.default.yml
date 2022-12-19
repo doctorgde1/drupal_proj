@@ -1,0 +1,25 @@
+uuid: e59be72b-63f8-4816-9d18-2d0b37b51638
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_
+    - field.field.block_content.social_.field_soc
+  module:
+    - entity_reference_revisions
+id: block_content.social_.default
+targetEntityType: block_content
+bundle: social_
+mode: default
+content:
+  field_soc:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true

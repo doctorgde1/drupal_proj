@@ -1,22 +1,22 @@
-uuid: ffa52bcc-5362-4736-be9f-664ba70032df
+uuid: ddbae887-150b-43d2-b28c-bd35280c7e1a
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.most_popular
+    - views.view.fitness
   module:
     - system
     - views
   theme:
-    - bartik
-id: views_block__most_popular_block_1
-theme: bartik
-region: sidebar_second
-weight: -14
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__fitness_block_1
+theme: newspaper_magazine_pro
+region: content
+weight: -4
 provider: null
-plugin: 'views_block:most_popular-block_1'
+plugin: 'views_block:fitness-block_1'
 settings:
-  id: 'views_block:most_popular-block_1'
+  id: 'views_block:fitness-block_1'
   label: ''
   label_display: visible
   provider: views

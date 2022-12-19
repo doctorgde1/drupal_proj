@@ -1,0 +1,43 @@
+uuid: 1283b813-d001-427e-8be4-3468cd1f4f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_link.field_amount_of_fol
+    - field.field.paragraph.social_link.field_fol
+    - field.field.paragraph.social_link.field_soc
+    - paragraphs.paragraphs_type.social_link
+  module:
+    - link
+    - text
+id: paragraph.social_link.default
+targetEntityType: paragraph
+bundle: social_link
+mode: default
+content:
+  field_amount_of_fol:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fol:
+    type: text_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_soc:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

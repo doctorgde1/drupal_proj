@@ -1,0 +1,29 @@
+uuid: 81b268cb-f7c2-4b5b-9374-11e069754e8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.lifestyle_related
+  module:
+    - system
+    - views
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__lifestyle_related_block_1
+theme: newspaper_magazine_pro
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:lifestyle_related-block_1'
+settings:
+  id: 'views_block:lifestyle_related-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /category/lifestyle

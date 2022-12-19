@@ -1,0 +1,25 @@
+uuid: 0c76bf63-d280-45fb-b141-ae1951a47c5a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_:0b4ec7b9-f6b2-4d89-a8be-7a727a6b2098'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: stayconnected
+theme: bartik
+region: sidebar_second
+weight: -17
+provider: null
+plugin: 'block_content:0b4ec7b9-f6b2-4d89-a8be-7a727a6b2098'
+settings:
+  id: 'block_content:0b4ec7b9-f6b2-4d89-a8be-7a727a6b2098'
+  label: 'Stay Connected'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

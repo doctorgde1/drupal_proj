@@ -1,0 +1,25 @@
+uuid: 587aa56b-c093-44ea-a76a-2398b5097de7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:advertisement:07779449-e03a-4607-ac19-26277ad71ca0'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_headeradvertisement
+theme: newspaper_magazine_pro
+region: header
+weight: -2
+provider: null
+plugin: 'block_content:07779449-e03a-4607-ac19-26277ad71ca0'
+settings:
+  id: 'block_content:07779449-e03a-4607-ac19-26277ad71ca0'
+  label: 'Header Advertisement'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: header_advertisement
+visibility: {  }

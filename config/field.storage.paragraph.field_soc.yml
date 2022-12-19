@@ -1,0 +1,19 @@
+uuid: 3231681b-ecfc-4a3d-ba9f-ccf9235c68ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_soc
+field_name: field_soc
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

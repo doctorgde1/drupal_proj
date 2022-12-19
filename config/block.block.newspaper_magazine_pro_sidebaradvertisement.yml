@@ -1,4 +1,4 @@
-uuid: 8f9736c6-c844-4597-bc44-93e215a5d6a0
+uuid: 36c74b3a-0a48-4deb-88e7-2d97c043c975
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - block_content
   theme:
-    - bartik
-id: sidebaradvertisement
-theme: bartik
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_sidebaradvertisement
+theme: newspaper_magazine_pro
 region: sidebar_second
 weight: -16
 provider: null

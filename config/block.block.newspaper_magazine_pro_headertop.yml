@@ -1,0 +1,25 @@
+uuid: 223c4eb0-8bb7-4545-8bd5-851d9e70b858
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-top
+  module:
+    - system
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_headertop
+theme: newspaper_magazine_pro
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:header-top'
+settings:
+  id: 'system_menu_block:header-top'
+  label: 'Header top menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
