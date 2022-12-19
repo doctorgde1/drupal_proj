@@ -1,0 +1,20 @@
+uuid: 782e3200-4b5b-4e10-8f80-cb198eaa2947
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_breadcrumbs
+theme: newspaper_magazine_pro
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Breadcrumbs Categories'
+  label_display: '0'
+  provider: system
+visibility: {  }

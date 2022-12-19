@@ -1,0 +1,25 @@
+uuid: 5ac8f97b-a9d2-4388-8658-04734983662d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-bottom-menu
+  module:
+    - system
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_headerbottommenu
+theme: newspaper_magazine_pro
+region: header
+weight: -1
+provider: null
+plugin: 'system_menu_block:header-bottom-menu'
+settings:
+  id: 'system_menu_block:header-bottom-menu'
+  label: 'Header bottom menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

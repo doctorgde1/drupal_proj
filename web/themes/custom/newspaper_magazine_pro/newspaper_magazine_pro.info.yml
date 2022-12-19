@@ -1,0 +1,13 @@
+name: Newspaper Magazine Pro
+type: theme
+base theme: bartik
+core_version_requirement: ^9
+libraries:
+  - newspaper_magazine_pro/global-styling
+  - newspaper_magazine_pro/global-scripts
+regions:
+  header: Header
+  breadcrumbs: Breadcrumbs
+  content: Content
+  sidebar_second: 'Sidebar second'
+  footer_fifth: 'Footer fifth'

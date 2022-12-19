@@ -1,0 +1,25 @@
+uuid: e2282205-e008-42eb-b286-a07e05f920f7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:description:db6f89b3-6111-41d6-93ce-8a4c747138d4'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_footerdescription
+theme: newspaper_magazine_pro
+region: footer_fifth
+weight: -9
+provider: null
+plugin: 'block_content:db6f89b3-6111-41d6-93ce-8a4c747138d4'
+settings:
+  id: 'block_content:db6f89b3-6111-41d6-93ce-8a4c747138d4'
+  label: 'Footer Description'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

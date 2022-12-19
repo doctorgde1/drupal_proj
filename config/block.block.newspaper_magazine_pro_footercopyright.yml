@@ -1,0 +1,25 @@
+uuid: 53804c5d-f450-4438-b91a-a0661f5b206a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:copytight:c0cecb6b-61d1-437d-9131-fed3825e7859'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_footercopyright
+theme: newspaper_magazine_pro
+region: footer_fifth
+weight: -4
+provider: null
+plugin: 'block_content:c0cecb6b-61d1-437d-9131-fed3825e7859'
+settings:
+  id: 'block_content:c0cecb6b-61d1-437d-9131-fed3825e7859'
+  label: 'Footer Copyright'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

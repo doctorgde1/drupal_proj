@@ -1,0 +1,29 @@
+uuid: ddbae887-150b-43d2-b28c-bd35280c7e1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fitness
+  module:
+    - system
+    - views
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__fitness_block_1
+theme: newspaper_magazine_pro
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:fitness-block_1'
+settings:
+  id: 'views_block:fitness-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
