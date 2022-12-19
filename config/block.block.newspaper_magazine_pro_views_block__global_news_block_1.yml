@@ -1,0 +1,29 @@
+uuid: 49f43c42-0d10-4c01-bad7-5ea458b908a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.global_news
+  module:
+    - system
+    - views
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__global_news_block_1
+theme: newspaper_magazine_pro
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:global_news-block_1'
+settings:
+  id: 'views_block:global_news-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

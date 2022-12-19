@@ -1,0 +1,31 @@
+uuid: 3a212f0d-b8b0-4b68-9a2e-6c01a0904456
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.highlights
+  module:
+    - system
+    - views
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__highlights_block_3
+theme: newspaper_magazine_pro
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:highlights-block_3'
+settings:
+  id: 'views_block:highlights-block_3'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping:
+    tid: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /category/lifestyle

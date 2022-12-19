@@ -1,0 +1,31 @@
+uuid: f6465913-b697-4d93-bd1d-8d62b44ffe36
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.highlights
+  module:
+    - system
+    - views
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__highlights_block_2
+theme: newspaper_magazine_pro
+region: content
+weight: -15
+provider: null
+plugin: 'views_block:highlights-block_2'
+settings:
+  id: 'views_block:highlights-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping:
+    tid: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /category/global

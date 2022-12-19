@@ -1,0 +1,29 @@
+uuid: 1cd1e576-3866-4600-9f21-0ca1f2e5fe43
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_articles_sidebar
+  module:
+    - system
+    - views
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__latest_articles_sidebar_block_1
+theme: newspaper_magazine_pro
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'views_block:latest_articles_sidebar-block_1'
+settings:
+  id: 'views_block:latest_articles_sidebar-block_1'
+  label: 'Latest Articles'
+  label_display: visible
+  provider: views
+  views_label: 'Latest Articles'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

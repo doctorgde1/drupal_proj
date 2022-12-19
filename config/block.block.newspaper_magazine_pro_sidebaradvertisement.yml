@@ -1,0 +1,25 @@
+uuid: 36c74b3a-0a48-4deb-88e7-2d97c043c975
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:advertisement:4f14aa0d-ef34-40e1-a646-3718491dd7e5'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_sidebaradvertisement
+theme: newspaper_magazine_pro
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'block_content:4f14aa0d-ef34-40e1-a646-3718491dd7e5'
+settings:
+  id: 'block_content:4f14aa0d-ef34-40e1-a646-3718491dd7e5'
+  label: '- Advertisement -'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: sidebar_advertisement
+visibility: {  }
