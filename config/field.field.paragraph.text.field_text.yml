@@ -1,20 +1,20 @@
-uuid: efddbd26-2858-4b73-8f93-f0f6dea7440e
+uuid: 9c3bfd1e-fefc-49e4-8a91-6c59d8cab738
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_text
-    - paragraphs.paragraphs_type.photo_with_text
+    - paragraphs.paragraphs_type.text
   module:
     - text
-id: paragraph.photo_with_text.field_text
+id: paragraph.text.field_text
 field_name: field_text
 entity_type: paragraph
-bundle: photo_with_text
+bundle: text
 label: Text
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

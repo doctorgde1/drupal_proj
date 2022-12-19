@@ -1,22 +1,22 @@
-uuid: ffa52bcc-5362-4736-be9f-664ba70032df
+uuid: cb7d8a5d-f299-4a61-ad72-47b96a8151f8
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.most_popular
+    - views.view.receipes
   module:
     - system
     - views
   theme:
-    - bartik
-id: views_block__most_popular_block_1
-theme: bartik
-region: sidebar_second
-weight: -14
+    - newspaper_magazine_pro
+id: newspaper_magazine_pro_views_block__receipes_block_1
+theme: newspaper_magazine_pro
+region: content
+weight: -6
 provider: null
-plugin: 'views_block:most_popular-block_1'
+plugin: 'views_block:receipes-block_1'
 settings:
-  id: 'views_block:most_popular-block_1'
+  id: 'views_block:receipes-block_1'
   label: ''
   label_display: visible
   provider: views

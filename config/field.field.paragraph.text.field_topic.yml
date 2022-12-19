@@ -1,0 +1,21 @@
+uuid: 6b794697-2288-49a7-9295-6f5af6bbf755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.field_topic
+field_name: field_topic
+entity_type: paragraph
+bundle: text
+label: Topic
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

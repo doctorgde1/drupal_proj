@@ -1,0 +1,23 @@
+uuid: 4ad92648-6709-47a9-a657-3961d5f7f7dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_amount_of_fol
+    - paragraphs.paragraphs_type.social_link
+id: paragraph.social_link.field_amount_of_fol
+field_name: field_amount_of_fol
+entity_type: paragraph
+bundle: social_link
+label: 'Amount of followers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
