@@ -6,7 +6,9 @@ libraries:
   - newspaper_magazine_pro/global-styling
   - newspaper_magazine_pro/global-scripts
 regions:
-  header: Header
+  header_top: 'Header top'
+  header_main: 'Header main'
+  header_bottom: 'Header bottom'
   breadcrumbs: Breadcrumbs
   content: Content
   sidebar_second: 'Sidebar second'
