@@ -7,6 +7,7 @@ libraries:
   - newspaper_magazine_pro/global-scripts
 regions:
   header_top: 'Header top'
+  header_widgets: 'Header widgets'
   header_main: 'Header main'
   header_bottom: 'Header bottom'
   breadcrumbs: Breadcrumbs

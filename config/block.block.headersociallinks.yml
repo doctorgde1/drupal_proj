@@ -11,7 +11,7 @@ dependencies:
 id: headersociallinks
 theme: newspaper_magazine_pro
 region: header_top
-weight: 0
+weight: -17
 provider: null
 plugin: 'block_content:12622b81-3cd6-48c4-834e-f967875a2e5b'
 settings:
