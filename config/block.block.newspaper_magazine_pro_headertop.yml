@@ -10,8 +10,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_headertop
 theme: newspaper_magazine_pro
-region: header
-weight: -4
+region: header_top
+weight: -16
 provider: null
 plugin: 'system_menu_block:header-top'
 settings:

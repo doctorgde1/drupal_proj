@@ -1,6 +1,6 @@
 uuid: 782e3200-4b5b-4e10-8f80-cb198eaa2947
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -8,8 +8,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_breadcrumbs
 theme: newspaper_magazine_pro
-region: header
-weight: 0
+region: breadcrumbs
+weight: -17
 provider: null
 plugin: system_breadcrumb_block
 settings:

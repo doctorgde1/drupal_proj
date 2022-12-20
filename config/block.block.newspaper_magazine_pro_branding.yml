@@ -10,8 +10,8 @@ _core:
   default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
 id: newspaper_magazine_pro_branding
 theme: newspaper_magazine_pro
-region: header
-weight: -3
+region: header_main
+weight: -17
 provider: null
 plugin: system_branding_block
 settings:
