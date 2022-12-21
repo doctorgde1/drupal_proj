@@ -12,9 +12,10 @@ mode: default
 content:
   field_contact_us:
     type: email_mailto
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  breadcrumbs: true
