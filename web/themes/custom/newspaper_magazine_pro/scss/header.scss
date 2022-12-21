@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  .header-region {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    font-size: rem(11);
+    font-weight: 500;
+    &:after,
+    &:before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: rem(calc($innerContainerWidth - $outerContainerWidth) + 46);
+      width: rem($outerContainerWidth);
+      height: 100%;
+    }
+    .header__additional {
+      display: flex;
+    }
+  }
+  .header__top {
+    &:after {
+      background-color: #f4f4f4;
+    }
+  }
+  .header__main {
+    padding: rem(20) 0; 
+  }
+  .header__bottom {
+    font-weight: 400;
+    &:after {
+      background-image: url("https://demo.tagdiv.com/newspaper_magazine_pro/wp-content/uploads/2020/06/bghd.jpg");
+      opacity: 0.2;
+      background-attachment: fixed;
+      border-bottom: rem(3) solid #dd3333;
+    }
+    &:before {
+      background-color: #232d35;
+      z-index: -2;
+      border-bottom: rem(3) solid #dd3333;
+    }
+  }
+}
