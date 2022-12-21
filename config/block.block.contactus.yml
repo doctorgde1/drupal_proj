@@ -1,0 +1,25 @@
+uuid: e021fdaa-2bf0-40e1-b461-b579a5f12d6f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_us:295b681e-ee3a-4252-aa00-9b4df6ae07b6'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: contactus
+theme: newspaper_magazine_pro
+region: footer_main
+weight: -16
+provider: null
+plugin: 'block_content:295b681e-ee3a-4252-aa00-9b4df6ae07b6'
+settings:
+  id: 'block_content:295b681e-ee3a-4252-aa00-9b4df6ae07b6'
+  label: 'Contact us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -11,7 +11,7 @@ dependencies:
 id: newspaper_magazine_pro_footerdescription
 theme: newspaper_magazine_pro
 region: footer_main
-weight: -16
+weight: -17
 provider: null
 plugin: 'block_content:db6f89b3-6111-41d6-93ce-8a4c747138d4'
 settings:

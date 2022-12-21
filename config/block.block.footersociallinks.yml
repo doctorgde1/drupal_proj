@@ -11,7 +11,7 @@ dependencies:
 id: footersociallinks
 theme: newspaper_magazine_pro
 region: footer_main
-weight: 0
+weight: -14
 provider: null
 plugin: 'block_content:b4eb94c8-ccf3-4970-9a71-6aa00cc45d99'
 settings:
