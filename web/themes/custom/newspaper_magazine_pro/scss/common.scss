@@ -1,0 +1,12 @@
+$outerContainerWidth: 1160;
+$innerContainerWidth: 1068;
+$mainBackgroundColor: white;
+$mainTextColor: black;
+
+@function rem($px) {
+    @return calc($px / 16) * 1rem;
+}
+
+@function em($px) {
+   @return calc($px / 16) * 1em;
+}
