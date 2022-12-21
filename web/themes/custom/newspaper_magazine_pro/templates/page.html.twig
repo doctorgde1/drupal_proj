@@ -139,21 +139,28 @@
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
-      <div class="layout-container">
-        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-          <div class="site-footer__top clearfix">
-            {{ page.footer_first }}
-            {{ page.footer_second }}
-            {{ page.footer_third }}
-            {{ page.footer_fourth }}
-          </div>
-        {% endif %}
-        {% if page.footer_fifth %}
-          <div class="site-footer__bottom">
-            {{ page.footer_fifth }}
-          </div>
-        {% endif %}
+    <footer class="footer">
+      <div class="footer__main footer-region">
+        <div class="footer__logo">
+          {{ page.footer_main.newspaper_magazine_pro_sitebranding }}
+        </div>
+        <div class="footer__description">
+          {{ page.footer_main.newspaper_magazine_pro_footerdescription }}
+        </div>
+        <div class="footer__contact-us">
+          {{ page.footer_main.contactus }}
+        </div>
+        <div class="footer__social-links">
+          {{ page.footer_main.footersociallinks }}
+        </div>
+      </div>
+      <div class="footer__bottom footer-region">
+        <div class="footer__copyright">
+          {{ page.footer_bottom.newspaper_magazine_pro_footercopyright }}
+        </div>
+        <div class="footer__menu">
+          {{ page.footer_bottom.newspaper_magazine_pro_footer }}
+        </div>
       </div>
     </footer>
   </div>
