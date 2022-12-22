@@ -1,0 +1,25 @@
+uuid: 534a6cd8-87f5-4338-9062-a68c2e897915
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sign_in_join:ad6fa431-30ab-4f9c-b1bb-57c7ccb8ef7e'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: signinjoin
+theme: newspaper_magazine_pro
+region: header_top
+weight: -18
+provider: null
+plugin: 'block_content:ad6fa431-30ab-4f9c-b1bb-57c7ccb8ef7e'
+settings:
+  id: 'block_content:ad6fa431-30ab-4f9c-b1bb-57c7ccb8ef7e'
+  label: 'Sign in / Join'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

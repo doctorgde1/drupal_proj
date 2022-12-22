@@ -1,0 +1,28 @@
+uuid: 76d0b237-0f97-4560-adf6-9b8a4948bf3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sign_in_join
+    - field.field.block_content.sign_in_join.field_sign_in_join
+  module:
+    - link
+id: block_content.sign_in_join.default
+targetEntityType: block_content
+bundle: sign_in_join
+mode: default
+content:
+  field_sign_in_join:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  breadcrumbs: true
