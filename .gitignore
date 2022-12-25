@@ -42,6 +42,9 @@ web/libraries
 web/modules/contrib/**
 web/themes/contrib/**
 
+# Ignore compiled css and js files
+web/themes/**/dist
+
 # Ignore paths that contain user-generated content.
 /web/sites/*/files
 /web/sites/*/private
