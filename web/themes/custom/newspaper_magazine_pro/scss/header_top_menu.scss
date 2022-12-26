@@ -1,0 +1,43 @@
+.header__top-menu {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(30);
+  .sign-in {
+    h2 {
+      &:hover {
+        color: #4db2ec;
+      }
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+  .menu {
+    a:hover,
+    a:visited {
+      color: #000;
+    }
+    li {
+      display: block;
+      position: relative;
+      padding: 0;
+    }
+    gap: rem(16);
+    display: flex;
+    padding: 0;
+    margin: 0;
+    .menu-right-arrow:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: rem(-5);
+      z-index: 20;
+      transform: translate(100%, 10%);
+      background-color: #000;
+      mask: url("../icons/header/arrow-right.svg") center / cover no-repeat;
+      width: rem(17);
+      height: rem(17);
+    }
+  }
+}
