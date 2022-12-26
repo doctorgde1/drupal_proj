@@ -1,0 +1,97 @@
+.header__bottom-menu {
+  .menu {
+    display: flex;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(5);
+      padding: 0 rem(12);
+      min-height: rem(46);
+      font-size: rem(13);
+      color: #fff;
+      &:hover,
+      &:visited {
+        color: #fff; }
+      &:hover {
+        background-color: #000;
+      }
+    }
+    li {
+      display: flex;
+      position: relative;
+      padding: 0;
+    }
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  .more {
+    display: flex;
+    position: relative;
+    padding: 0;
+    .header__menu-more {
+      display: none;
+    }
+    &:hover {
+      .header__menu-more {
+        display: block;
+        min-width: rem(195);
+        position: absolute;
+        z-index: 20;
+        bottom: 0;
+        transform: translateY(100%);
+        left: rem(-20);
+        padding: rem(10) 0 rem(15) 0;
+        li {
+        }
+        background-color: #fff;
+        a {
+          font-weight: 500;
+          font-size: rem(12);
+          min-height: rem(38);
+          padding: 0 rem(20);
+          color: #000;
+          &:before {
+            background-color: #000;
+          }
+          &:hover,
+          &:visited {
+            color: #008d7f;
+          }
+          &:hover {
+            background-color: transparent;
+            &:before {
+              background-color: #008d7f;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  $icons: "house", "globe", "bicycle", "flower", "chip", "heart", "matrix", "camera", "lamp", "gadgets", "speaker", "leaves";
+  @each $icon in $icons {
+    .menu-#{$icon} {
+      &:before {
+        content: '';
+        display: block;
+        min-width: rem(24);
+        height: rem(24);
+        background-color: #fff;
+        mask: url("../icons/header/#{$icon}.svg") center / cover no-repeat; 
+      }
+    }
+  }
+  .menu-expand {
+    &:after {
+      content: '';
+      display: block;
+      min-width: rem(6);
+      height: rem(11);
+      background-color: #fff;
+      mask: url("../icons/general/expand-more.svg") center / cover no-repeat;
+    }
+  }
+
+}
