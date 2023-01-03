@@ -34,6 +34,7 @@
     {% else %}
       <ul class="menu">
     {% endif %}
+
     {% for item in items %}
       {%
         set classes = [
@@ -43,6 +44,7 @@
           item.in_active_trail ? 'menu-item--active-trail',
         ]
       %}
+
       {% if loop.index <= 7 %}
         <li{{ item.attributes.addClass(classes) }}>
           {{ link(item.title, item.url) }}

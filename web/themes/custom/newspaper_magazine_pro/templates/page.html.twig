@@ -92,6 +92,7 @@
         </div>
       </div>
     </header>
+
     {% if page.highlighted %}
       <div class="highlighted">
         <aside class="layout-container section clearfix" role="complementary">
@@ -99,6 +100,7 @@
         </aside>
       </div>
     {% endif %}
+
     {% if page.featured_top %}
       <div class="featured-top">
         <aside class="featured-top__inner section layout-container clearfix" role="complementary">
@@ -115,6 +117,7 @@
             {{ page.content }}
           </section>
         </main>
+
         {% if page.sidebar_first %}
           <div id="sidebar-first" class="column sidebar">
             <aside class="section" role="complementary">
@@ -122,6 +125,7 @@
             </aside>
           </div>
         {% endif %}
+
         {% if page.sidebar_second %}
           <div id="sidebar-second" class="column sidebar">
             <aside class="section" role="complementary">
@@ -131,6 +135,7 @@
         {% endif %}
       </div>
     </div>
+
     {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
       <div class="featured-bottom">
         <aside class="layout-container clearfix" role="complementary">

@@ -4,11 +4,14 @@
     flex-wrap: wrap;
     gap: rem(16);
     padding: 0;
+
     li {
       padding: 0;
     }
+
     a {
       color: #cccccc;
+
       &:hover {
         color: #fff;
       }
