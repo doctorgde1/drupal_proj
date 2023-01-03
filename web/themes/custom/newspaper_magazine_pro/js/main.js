@@ -1,1 +1,1 @@
-window.alert("hello themeing");
+'use strict'

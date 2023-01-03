@@ -10,8 +10,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_weather
 theme: newspaper_magazine_pro
-region: header
-weight: -6
+region: header_widgets
+weight: -17
 provider: null
 plugin: 'block_content:686be0fa-1422-403d-8701-c0e9d5bfa7bd'
 settings:

@@ -8,8 +8,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_sitebranding
 theme: newspaper_magazine_pro
-region: footer_fifth
-weight: -10
+region: footer_main
+weight: -18
 provider: null
 plugin: system_branding_block
 settings:

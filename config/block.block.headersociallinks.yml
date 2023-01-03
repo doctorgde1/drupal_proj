@@ -1,0 +1,25 @@
+uuid: 2e0a66e3-878b-4eca-ad8e-c2511687c98e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_:12622b81-3cd6-48c4-834e-f967875a2e5b'
+  module:
+    - block_content
+  theme:
+    - newspaper_magazine_pro
+id: headersociallinks
+theme: newspaper_magazine_pro
+region: header_top
+weight: -16
+provider: null
+plugin: 'block_content:12622b81-3cd6-48c4-834e-f967875a2e5b'
+settings:
+  id: 'block_content:12622b81-3cd6-48c4-834e-f967875a2e5b'
+  label: 'Header social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

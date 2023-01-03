@@ -1,0 +1,31 @@
+uuid: 250b234a-8508-4317-b267-1a4b25476aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sign_in_join
+    - field.field.block_content.sign_in_join.field_sign_in_join
+  module:
+    - link
+id: block_content.sign_in_join.default
+targetEntityType: block_content
+bundle: sign_in_join
+mode: default
+content:
+  field_sign_in_join:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

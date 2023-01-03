@@ -1,5 +1,8 @@
-body {
-    background-color: yellow;
-    color: red;
-    font-size: 24px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import "null.scss";
+@import "header.scss";
+@import "header_top_menu.scss";
+@import "header_bottom_menu.scss";
+@import "footer.scss";
+@import 'footer_menu.scss';
+@import "footer.scss";
