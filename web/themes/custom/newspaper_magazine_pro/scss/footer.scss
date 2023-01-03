@@ -57,13 +57,17 @@
         margin: 0;
       }
       a {
-        border: none;
         color: #008d7f;
       }
     }
   }
   .footer__bottom {
+    .content {
+      margin: 0;
+    }
+    align-items: center;
     justify-content: space-between;
+    min-height: rem(37);
     &:after {
       background-color: #11171c;
     }

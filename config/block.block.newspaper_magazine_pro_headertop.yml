@@ -11,7 +11,7 @@ dependencies:
 id: newspaper_magazine_pro_headertop
 theme: newspaper_magazine_pro
 region: header_top
-weight: -18
+weight: -17
 provider: null
 plugin: 'system_menu_block:header-top'
 settings:
