@@ -13,4 +13,5 @@ regions:
   breadcrumbs: Breadcrumbs
   content: Content
   sidebar_second: 'Sidebar second'
-  footer_fifth: 'Footer fifth'
+  footer_main: 'Footer main'
+  footer_bottom: 'Footer bottom'

@@ -10,8 +10,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_footercopyright
 theme: newspaper_magazine_pro
-region: footer_fifth
-weight: -4
+region: footer_bottom
+weight: -17
 provider: null
 plugin: 'block_content:c0cecb6b-61d1-437d-9131-fed3825e7859'
 settings:
