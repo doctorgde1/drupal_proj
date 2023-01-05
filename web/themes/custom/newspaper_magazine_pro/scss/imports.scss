@@ -20,5 +20,20 @@
 @import 'view_modes/latest_articles.scss';
 @import 'view_modes/gaming.scss';
 @import 'view_modes/must-read.scss';
+/* Import views styles */
+@import 'views/defaults.scss';
+@import 'views/global_news.scss';
+@import 'views/trending_now.scss';
+@import 'views/travel_guides.scss';
+@import 'views/most_popular.scss';
+@import 'views/highlights.scss';
+@import 'views/gadgets.scss';
+@import 'views/receipes.scss';
+@import 'views/fitness.scss';
+@import 'views/must_read.scss';
+@import 'views/categories.scss';
+@import 'views/latest_articles.scss';
+@import 'views/latest_articles_sidebar.scss';
+@import 'views/category_related.scss';
 /* Import pager styles */
 @import 'pager.scss';
