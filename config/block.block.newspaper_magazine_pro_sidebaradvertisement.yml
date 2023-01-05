@@ -10,8 +10,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_sidebaradvertisement
 theme: newspaper_magazine_pro
-region: sidebar_second
-weight: -16
+region: sidebar_first
+weight: -17
 provider: null
 plugin: 'block_content:4f14aa0d-ef34-40e1-a646-3718491dd7e5'
 settings:

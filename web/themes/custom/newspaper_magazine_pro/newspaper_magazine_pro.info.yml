@@ -11,7 +11,17 @@ regions:
   header_main: 'Header main'
   header_bottom: 'Header bottom'
   breadcrumbs: Breadcrumbs
-  content: Content
+  full_width_blocks_first: 'Full width blocks first'
+  full_width_blocks_second: 'Full width blocks second'
+  full_width_blocks_third: 'Full width blocks third'
+  content_first: 'Content first'
+  content_second: 'Content second'
+  content_third: 'Content third'
+  two_columns_content_first: 'Two columns content first'
+  two_columns_content_second: 'Two columns content second'
+  two_columns_content_third: 'Two columns content third'
+  sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
+  sidebar_third: 'Sidebar third'
   footer_main: 'Footer main'
   footer_bottom: 'Footer bottom'

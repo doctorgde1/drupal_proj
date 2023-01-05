@@ -11,8 +11,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_views_block__trending_now_block_1
 theme: newspaper_magazine_pro
-region: content
-weight: -10
+region: full_width_blocks_first
+weight: -18
 provider: null
 plugin: 'views_block:trending_now-block_1'
 settings:

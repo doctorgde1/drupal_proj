@@ -11,8 +11,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_views_block__gadgets_small_block_1
 theme: newspaper_magazine_pro
-region: content
-weight: -7
+region: two_columns_content_first
+weight: -18
 provider: null
 plugin: 'views_block:gadgets_small-block_1'
 settings:
