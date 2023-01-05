@@ -1,0 +1,51 @@
+/**
+* @file
+* Layout for Most popular view mode
+*/
+
+.node--view-mode-most-popular-thumbnail {
+  /* Positioning */
+  .most-popular {
+    /* Set image and other data in two columns with gap */
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+
+    /* Postioning for other data */
+    .most-popular__data {
+      /* Set color for links on hover */
+      a:hover {
+        color: #dd3333;
+      }
+
+      /* Set category tag and title in two rows with gap */
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+    }
+
+    /* Set style for category */
+    .most-popular__category {
+      /* Set font */
+      font-size: rem(11);
+      font-weight: 400;
+    }
+  }
+
+  /* Set style for image */
+  .field--name-field-preview-image {
+    /* Set width and height for image */
+    width: 95px;
+    height: 95px;
+    /* Make images round */
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  /* Set style for title */
+  .node__title {
+    /* Set font */
+    font-size: rem(15);
+    font-weight: 500;
+  }
+}

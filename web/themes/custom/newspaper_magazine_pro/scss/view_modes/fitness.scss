@@ -1,0 +1,52 @@
+/**
+* @file
+* Layout for fitness view mode
+*/
+
+.node--view-mode-fitness-thumbnail {
+  .fitness {
+    width: 100%;
+    /**
+    * Override default flex orientation,
+    * set image and data in to columns with gap 
+    */
+    flex-direction: row;
+    gap: rem(15);
+    /* Center data */
+    align-items: center;
+
+    /* Override default data styles */
+    .fitness__data {
+      /* Set data in 3 rows with gap */
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+    }
+
+    /* Override default title styles */
+    .fitness__title h2 {
+      /* Remove default margin */
+      margin: 0;
+    }
+
+    /* Override default category styles */
+    .fitness__category {
+      /* Remove default margin */
+      margin: 0;
+    }
+
+    /* Override default teaser text styles */
+    .fitness__teaser-text {
+      /* Remove default margin */
+      margin: 0;
+    }
+
+
+    /* Set flex wraper for category and meta */
+    .fitness__flex-wrap {
+      /* Set category and meta in to columns with gap */
+      display: flex;
+      gap: rem(8);
+    }
+  }
+}

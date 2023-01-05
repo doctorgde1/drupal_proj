@@ -1,0 +1,56 @@
+/**
+* @file
+* Layout for Fashion view mode
+*/
+
+.node--view-mode-fashion-thumbnail {
+  /* Layout for trending now view modes with data placed inside image */
+  .thumbnail-data-in-image {
+    align-items: center;
+    justify-content: center;
+
+    /* Set styles for data container */
+    .data-container {
+      padding: rem(15);
+    }
+
+    /* Add backgound on hover */
+    &:after {
+      /* Add animation for opacity */
+      transition: opacity 1s ease;
+      /* Set background with blend mode */
+      background-color: #008d7f;
+      mix-blend-mode: color;
+      /* Hide effect when unhover */
+      opacity: 0;
+    }
+    &:hover {
+      &:after {
+        /* Reveals effect when hover */
+        opacity: 1;
+      }
+    }
+
+    /* Add gradient from bottom to top on image */
+    &:before {
+      background-color: rgba(0,0,0,0.32);
+    }
+  }
+}
+
+/* Layout for travel guides view mode */
+.node--view-mode-fashion-thumbnail {
+  .fashion {
+    /* Set font for category and meta */
+    font-size: rem(13);
+    text-align: center;
+
+    .fashion__title h2 {
+      /* Set top and bottom margin */
+      margin: rem(12) 0 rem(20) 0;
+      /* Set font for title */
+      font-size: rem(19);
+      font-weight: 500;
+    }
+  }
+}
