@@ -1,1 +1,113 @@
 @import 'imports.scss';
+
+img {
+  max-width: unset;
+}
+
+body {
+  font-family: Rubik;
+  background-color: $mainBackgroundColor;
+  color: $mainTextColor;
+  font-size: rem(14);
+  background-image: url("https://demo.tagdiv.com/newspaper_magazine_pro/wp-content/uploads/2020/06/what-the-hex.png");
+  background-attachment: fixed;
+}
+
+.region-block {
+  padding: 0 rem(24);
+}
+
+.page-wrapper {
+  background-color: #fff;
+  box-shadow: 0 rem(-13) rem(10) rem(3) rgba(0, 0, 0, 0.12);
+  max-width: rem($outerContainerWidth);
+  margin: 0 auto;
+
+  .page {
+    max-width: rem($innerContainerWidth);
+    margin: 0 auto;
+  }
+}
+
+.content {
+  section {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 0 rem(48);
+    grid-template-rows: auto;
+    grid-template-columns: calc(100% - rem(325) - rem(48)) rem(325);
+    grid-template-areas: "full-width-block-first full-width-block-first"
+                         "content-first sidebar-first"
+                         "two-columns-content-first sidebar-first"
+                         "full-width-block-second full-width-block-second"
+                         "content-second sidebar-second"
+                         "two-columns-content-second sidebar-second"
+                         "full-width-block-third full-width-block-third"
+                         "content-third sidebar-third"
+                         "two-columns-content-third sidebar-third";
+
+
+    $areas: ("full-width-block", "two-columns-content",
+             "content", "sidebar");
+
+    @each $area in $areas {
+      .#{$area}-first {
+        margin-bottom: rem(48);
+        grid-area: #{$area}-first;
+      }
+
+      .#{$area}-second {
+        margin-bottom: rem(48);
+        grid-area: #{$area}-second;
+      }
+
+      .#{$area}-third {
+        grid-area: #{$area}-third;
+      }
+    }
+
+    .full-width-block {
+      width: 100%;
+    }
+
+    .two-columns-content .region {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .content-block .region {
+      display: flex;
+      flex-direction: column;
+      gap: rem(48);
+    }
+
+    .sidebar {
+      width: 100%;
+
+      h2 {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .block {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+      }
+
+      .section {
+        padding: 0;
+      }
+
+      .region {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: rem(48);
+      }
+    }
+  }
+}
