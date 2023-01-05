@@ -12,13 +12,13 @@ dependencies:
 id: newspaper_magazine_pro_views_block__trending_now_block_1
 theme: newspaper_magazine_pro
 region: full_width_blocks_first
-weight: -18
+weight: -17
 provider: null
 plugin: 'views_block:trending_now-block_1'
 settings:
   id: 'views_block:trending_now-block_1'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none

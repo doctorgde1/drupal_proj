@@ -18,7 +18,7 @@ plugin: 'views_block:latest_articles_sidebar-block_1'
 settings:
   id: 'views_block:latest_articles_sidebar-block_1'
   label: 'Latest Articles'
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: 'Latest Articles'
   items_per_page: none
