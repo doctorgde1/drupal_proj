@@ -28,6 +28,15 @@ a:active {
   outline: none;
 }
 
+a,
+a:hover {
+  border: none;
+}
+
+.clearfix::after {
+  display: none;
+}
+
 nav,
 footer,
 header,
