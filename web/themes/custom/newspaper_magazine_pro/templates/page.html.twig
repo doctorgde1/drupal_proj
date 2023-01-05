@@ -93,58 +93,98 @@
       </div>
     </header>
 
-    {% if page.highlighted %}
-      <div class="highlighted">
-        <aside class="layout-container section clearfix" role="complementary">
-          {{ page.highlighted }}
-        </aside>
-      </div>
-    {% endif %}
-
-    {% if page.featured_top %}
-      <div class="featured-top">
-        <aside class="featured-top__inner section layout-container clearfix" role="complementary">
-          {{ page.featured_top }}
-        </aside>
-      </div>
-    {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
       <div id="main" class="layout-main clearfix">
         {{ page.breadcrumb }}
-        <main id="content" class="column main-content" role="main">
+
+        <main class="content" role="main">
           <section class="section">
-            <a id="main-content" tabindex="-1"></a>
-            {{ page.content }}
+            <!-- <a id="main-content" tabindex="-1"></a> -->
+
+            {% if page.full_width_blocks_first %}
+              <div class="full-width-block-first full-width-block">
+                {{ page.full_width_blocks_first }}
+              </div>
+            {% endif %}
+
+            {% if page.full_width_blocks_second %}
+              <div class="full-width-block-second full-width-block">
+                {{ page.full_width_blocks_second }}
+              </div>
+            {% endif %}
+
+            {% if page.full_width_blocks_third %}
+              <div class="full-width-block-third full-width-block">
+                {{ page.full_width_blocks_third }}
+              </div>
+            {% endif %}
+
+            {% if page.content_first %}
+              <div class="content-first content-block">
+                {{ page.content_first }}
+              </div>
+            {% endif %}
+            
+            {% if page.content_second %}
+              <div class="content-second content-block">
+                {{ page.content_second }}
+              </div>
+            {% endif %}
+
+            {% if page.content_third %}
+              <div class="content-third content-block">
+                {{ page.content_third }}
+              </div>
+            {% endif %}
+
+            {% if page.two_columns_content_first %}
+              <div class="two-columns-content-first two-columns-content">
+                {{ page.two_columns_content_first }}
+              </div>
+            {% endif %}
+
+            {% if page.two_columns_content_second %}
+              <div class="two-columns-content-second two-columns-content">
+                {{ page.two_columns_content_second }}
+              </div>
+            {% endif %}
+
+            {% if page.two_columns_content_third %}
+              <div class="two-columns-content-third two-columns-content">
+                {{ page.two_columns_content_third }}
+              </div>
+            {% endif %}
+
+
+            {% if page.sidebar_first %}
+              <div class="sidebar-first sidebar">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_first }}
+                </aside>
+              </div>
+            {% endif %}
+
+            {% if page.sidebar_second %}
+              <div class="sidebar-second sidebar">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_second }}
+                </aside>
+              </div>
+            {% endif %}
+
+            {% if page.sidebar_third %}
+              <div class="sidebar-third sidebar">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_third }}
+                </aside>
+              </div>
+            {% endif %}
+              
           </section>
         </main>
-
-        {% if page.sidebar_first %}
-          <div id="sidebar-first" class="column sidebar">
-            <aside class="section" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          </div>
-        {% endif %}
-
-        {% if page.sidebar_second %}
-          <div id="sidebar-second" class="column sidebar">
-            <aside class="section" role="complementary">
-              {{ page.sidebar_second }}
-            </aside>
-          </div>
-        {% endif %}
       </div>
     </div>
 
-    {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
-      <div class="featured-bottom">
-        <aside class="layout-container clearfix" role="complementary">
-          {{ page.featured_bottom_first }}
-          {{ page.featured_bottom_second }}
-          {{ page.featured_bottom_third }}
-        </aside>
-      </div>
-    {% endif %}
     <footer class="footer">
       <div class="footer__main footer-region">
         <div class="footer__logo">
