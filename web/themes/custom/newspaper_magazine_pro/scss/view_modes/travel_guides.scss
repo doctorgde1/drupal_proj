@@ -1,0 +1,60 @@
+/**
+* @file
+* Layout for Travel guides view mode
+*/
+
+.node--view-mode-travel-guides-thumbnail {
+
+  /* Layout for trending now view modes with data placed inside image */
+  .thumbnail-data-in-image {
+    /* Set styles for data container */
+    .data-container {
+      /* Set padding */
+      padding: rem(10) rem(15);
+      /* Set position */
+      bottom: 0;
+      left: 0;
+    }
+
+    /* Add backgound on hover */
+    &:after {
+      /* Add animation for opacity */
+      transition: opacity 1s ease;
+      /* Set background with blend mode */
+      background-color: rgba(112,204,63,0.3);
+      mix-blend-mode: color;
+      /* Hide effect when unhover */
+      opacity: 0;
+    }
+    &:hover {
+      &:after {
+        /* Reveals effect when hover */
+        opacity: 1;
+      }
+    }
+
+    /* Add gradient from bottom to top on image */
+    &:before {
+      background: linear-gradient(0deg,rgba(0,0,0,0.6),
+                  rgba(0,0,0,0.2) 35%,
+                  rgba(0,0,0,0) 50%,
+                  rgba(0,0,0,0));
+    }
+  }
+}
+
+/* Layout for travel guides view mode */
+.node--view-mode-travel-guides-thumbnail {
+  .travel-guides {
+    /* Set font for category */
+    font-size: rem(11);
+    text-align: center;
+
+    .travel-guides__title h2 { 
+      margin-top: rem(10);
+      /* Set font for title */
+      font-size: rem(15);
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,213 @@
+/**
+* @file
+* Default styles for view mode's
+*/
+
+[class*="view-mode"] {
+  /* Set font color */
+  color: #000;
+
+  /* Set style for nodes */
+  [class*="node"] {
+    /* Nullify default margin and padding */
+    margin: 0;
+    padding: 0;
+  }
+
+  [class*="image-style"] {
+    /* Nullify deafault margin */
+    margin: 0;
+  }
+
+  /* Set style for fields */
+  [class*="field"] {
+    /* Nullify deafault margin and padding */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Set style for category */
+  [class*="category"] {
+    /* Set category tag all capital letters */
+    a {
+      text-transform: uppercase;
+    }
+  }
+
+  /* Set style for span with author name */
+  .author {
+    text-transform: capitalize;
+    color: #000;
+  }
+
+  /* Set style for title */
+  .node__title {
+    /* Remove border */
+    border: none;
+  }
+}
+
+/* Default layout for view modes with data placed inside image */
+.thumbnail-data-in-image {
+  /* Set color */
+  color: #fff;
+  a,
+  span {
+    color: #fff;
+  }
+  /* Set container to have size of the image */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  /* Data will be postitioned relative to this element */
+  position: relative;
+  /* Hidden overflow */
+  overflow: hidden;
+
+  /* Set styles for image container */
+  .image-container {
+    /* Set image container to fit image */
+    width: fit-content;
+  }
+
+  /* Set styles for data container */
+  .data-container {
+    /**
+    * Disable clicks on data.
+    * Therefore, the entire block will be treated as a link to the article 
+    */
+    pointer-events: none;
+    /**
+    * Set the absolute position.
+    * Positionig should be setted for specific class
+    */
+    position: absolute;
+  }
+
+  /* Add pseudo classes for special effects on hover */
+  &:after,
+  &:before {
+    content: '';
+    /**
+    * Disable clicks on pseudo classes.
+    * Therefore, the entire block will be treated as a link to the article 
+    */
+    pointer-events: none;
+    /* Set default position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Set default size */
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/**
+* Store similar view modes names 
+* and hover colors for each big view mode
+*/
+$big-view-modes: ("gadgets-big": "#d44cef",
+                  "receipes-big": "#eab04b",
+                  "global-news-big": "#85a1b2",
+                  "gaming": "#e86aa1",
+                  "latest-articles": "#008d7f",
+                  "category-related": "#008d7f",
+                  "fitness": "#478fe0");
+
+/* Layouts for big view modes */
+@each $view-mode, $hover-color in $big-view-modes {
+  .#{$view-mode} {
+    /* Set image and other data in one column */
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+
+    /* Set color for links on hover */
+    a:hover {
+      color: #{$hover-color};
+    }
+    
+    /* Set style for data */
+    .#{$view-mode}__data {
+      /* Set font */
+      font-size: rem(13);
+      font-weight: 400;
+
+      /* Set style for category */
+      .#{$view-mode}__category {
+        margin-top: rem(15);
+      }
+
+      /* Set style for title */
+      .#{$view-mode}__title h2{
+        /* Set font */
+        font-size: rem(21);
+        line-height: rem(25);
+        font-weight: 500;
+        /* Set margin */
+        margin: rem(10) 0;
+      }
+
+      /* Set style for metadata */
+      .#{$view-mode}__meta {
+        color: #767676;
+      }
+
+      /* Set style for teaser text */
+      .#{$view-mode}__teaser-text {
+        color: #767676;
+        margin-top: rem(12);
+        /* Set line height */
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+/**
+* Store similar view modes names 
+* and hover colors for each big view mode
+*/
+$small-view-modes: ("gadgets-small": "#d44cef",
+                    "receipes-small": "#eab04b",
+                    "global-news-small": "#85a1b2");
+
+/* Layouts for small view modes */
+@each $view-mode, $hover-color in $small-view-modes {
+  .#{$view-mode} {
+    /* Set image and other data in one row with gap */
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+
+    /* Set color for links on hover */
+    a:hover {
+      color: #{$hover-color};
+    }
+    
+    /* Set style for data */
+    .#{$view-mode}__data {
+      /* Set data in one column with gap */
+      display: flex;
+      flex-direction: column;
+      gap: rem(6);
+
+      /* Set style for title */
+      .#{$view-mode}__title h2{
+        /* Set font */
+        font-size: rem(15);
+        line-height: rem(18);
+        font-weight: 500;
+      }
+
+      /* Set style for metadata */
+      .#{$view-mode}__meta {
+        font-size: rem(11);
+        line-height: 1;
+        font-weight: 400;
+        color: #767676;
+      }
+    }
+  }
+}

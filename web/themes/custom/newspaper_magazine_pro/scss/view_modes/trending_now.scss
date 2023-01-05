@@ -1,0 +1,96 @@
+/**
+* @file
+* Layout for trending now view modes
+*/
+
+/* Layout for both small and big trending now view modes */
+.node--view-mode-trending-now-thumbnail-big,
+.node--view-mode-trending-now-thumbnail-small {
+
+  /* Layout for trending now view modes with data placed inside image */
+  .thumbnail-data-in-image {
+    /* Set styles for data container */
+    .data-container {
+      /* Set padding */
+      padding: rem(24);
+      /* Set position */
+      bottom: 0;
+      left: 0;
+    }
+
+    /* Add backgound on hover */
+    &:after {
+      /* Add animation for opacity */
+      transition: opacity 1s ease;
+      /* Set background with blend mode */
+      background-color: rgba(221,51,51,0.25);
+      mix-blend-mode: color;
+      /* Hide effect when unhover */
+      opacity: 0;
+    }
+    &:hover {
+      &:after {
+        /* Reveals effect when hover */
+        opacity: 1;
+      }
+    }
+
+    /* Add gradient from bottom to top on image */
+    &:before {
+      background: linear-gradient(0deg,rgba(0,0,0,0.6),
+                  rgba(0,0,0,0.2) 35%,
+                  rgba(0,0,0,0) 50%,
+                  rgba(0,0,0,0));
+    }
+  }
+}
+
+/* Layout for trending now big view mode */
+.node--view-mode-trending-now-thumbnail-big {
+  .trending-now-big {
+    /* Set font for category and meta */
+    font-size: rem(13);
+    .trending-now-big__title h2 {
+      /* Set top and bottom margin */
+      margin: rem(12) 0 rem(8) 0;
+      /* Set font for title */
+      font-size: rem(30);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+  }
+}
+
+/* Layout for trending now small view mode */
+.node--view-mode-trending-now-thumbnail-small {
+  .trending-now-small {
+    /* Set font for category and meta */
+    font-size: rem(11);
+    .trending-now-small__title h2 {
+      margin-top: rem(8);
+      /* Set font for title */
+      font-size: rem(17);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+  }
+  /* Override for small view mode */
+  .thumbnail-data-in-image {
+    .data-container {
+      /* Override padding */
+      padding: rem(15);
+    }
+  }
+}
+
+/* Layout for trending now row view mode */
+.node--view-mode-trending-now-thumbnail {
+  .trending-now-row {
+    .trending-now-row__title h2 {
+      /* Set font */
+      font-size: rem(13);
+      font-weight: 500;
+      line-height: rem(25);
+    }
+  }
+}
