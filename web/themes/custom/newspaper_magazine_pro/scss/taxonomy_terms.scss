@@ -1,0 +1,26 @@
+/**
+* @file
+* Layout for taxonomy terms
+*/
+
+.field--name-field-tags {
+  display: flex;
+  gap: rem(5);
+  margin: 0;
+
+  .field__item {
+    transition: all 0.3s ease;
+    background-color: #008d7f;
+    padding: rem(4) rem(8);
+    font-size: rem(11);
+    line-height: rem(11);
+
+    a {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
