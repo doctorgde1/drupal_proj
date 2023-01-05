@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import 'common.scss';
+@import "null.scss";
+@import "header.scss";
+@import "header_top_menu.scss";
+@import "header_bottom_menu.scss";
+@import "footer.scss";
+@import 'footer_menu.scss';
+@import "footer.scss";
+@import 'sidebar_advertisement.scss';
+/* Import view modes styles */
+@import 'view_modes/defaults.scss';
+@import 'view_modes/most_popular.scss';
+@import 'view_modes/trending_now.scss';
+@import 'view_modes/travel_guides.scss';
+@import 'view_modes/highlights.scss';
+@import 'view_modes/fashion.scss';
+@import 'view_modes/fitness.scss';
+@import 'view_modes/gaming.scss';
+@import 'view_modes/latest_articles.scss';
+@import 'view_modes/gaming.scss';
+@import 'view_modes/must-read.scss';
+/* Import pager styles */
+@import 'pager.scss';

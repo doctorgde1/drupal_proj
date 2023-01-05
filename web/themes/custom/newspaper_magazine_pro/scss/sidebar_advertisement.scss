@@ -1,0 +1,28 @@
+/**
+* @file
+* Layout for sidebar advertisement block
+*/
+
+.sidebar-advertisement {
+  display: flex;
+  gap: rem(5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    display: block;
+    width: fit-content;
+    font-size: rem(10);
+    color: #767;
+  }
+
+  .content {
+    width: fit-content;
+    margin: 0;
+
+    img {
+      margin: 0;
+    }
+  }
+}

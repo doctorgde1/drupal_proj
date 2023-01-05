@@ -11,8 +11,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_views_block__global_news_block_1
 theme: newspaper_magazine_pro
-region: content
-weight: -9
+region: content_first
+weight: -15
 provider: null
 plugin: 'views_block:global_news-block_1'
 settings:

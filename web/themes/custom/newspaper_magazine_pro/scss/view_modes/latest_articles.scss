@@ -1,0 +1,31 @@
+/**
+* @file
+* Layout for latest-articles view mode
+*/
+
+.node--view-mode-last-articles-thumbnail {
+  .latest-articles {
+    gap: rem(20);
+
+    /* Override default data styles */
+    .latest-articles__data {
+      /* Set data in 3 rows with gap */ display: flex;
+      flex-direction: column;
+      gap: rem(10);
+    }
+
+    /* Override default title styles */
+    .latest-articles__title h2 {
+      /* Override default title font size */
+      font-size: rem(19);
+      /* Remove default margin */
+      margin: 0;
+    }
+
+    /* Override default category styles */
+    .latest-articles__category {
+      /* Remove default margin */
+      margin: 0;
+    }
+  }
+}
