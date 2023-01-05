@@ -1,0 +1,82 @@
+/**
+* @file
+* Default styles for views
+*/
+
+$views: ("gadgets": "#d44cef",
+        "receipes": "#eab04b",
+        "global-news": "#85a1b2",
+        "gaming": "#e86aa1",
+        "latest-articles": "#008d7f",
+        "latest-articles-sidebar": "#008d7f",
+        "must-read": "#008d7f",
+        "categories": "#008d7f",
+        "category-related": "#008d7f",
+        "most-popular": "#dd3333",
+        "travel-guides": "#85c442",
+        "fitness": "#478fe0");
+
+@each $view, $line-color in $views {
+  .#{$view}-view {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+
+    .view-title {
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+
+      h2 {
+        order: 1;
+        flex: 0 0 fit-content;
+      }
+
+      &:after {
+        content: '';
+        order: 2;
+        display: block;
+        width: 100%;
+        height: rem(4);
+        background-color: #{$line-color};
+      }
+
+      .view-filters {
+        order: 3;
+      }
+    }
+  }
+}
+
+.block-views {
+  .content {
+    margin: 0;
+  }
+
+  .view-title h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: rem(17);
+    font-weight: 500;
+  }
+}
+
+
+.view .view-content {
+  .views-view-grid {
+    display: flex;
+    margin: 0;
+
+    .views-col,
+    .views-row {
+      border: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+  }
+
+  .views-col {
+    flex-direction: column;
+  }
+}

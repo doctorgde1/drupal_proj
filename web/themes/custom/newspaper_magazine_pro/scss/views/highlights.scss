@@ -1,0 +1,14 @@
+/**
+* @file
+* Layout for highlights view
+*/
+
+.highlights-view {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+
+  .views-row {
+    gap: rem(5);
+  }
+}
