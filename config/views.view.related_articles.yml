@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.related_articles
+    - core.entity_view_mode.node.travel_guides_thumbnail
     - node.type.article
   module:
     - node
@@ -183,7 +183,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: related_articles
+          view_mode: travel_guides_thumbnail
       query:
         type: views_query
         options:

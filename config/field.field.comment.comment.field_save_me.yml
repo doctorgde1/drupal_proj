@@ -1,0 +1,23 @@
+uuid: 1dabe203-c9ff-40ec-b807-7f2301ff75e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - field.storage.comment.field_save_me
+id: comment.comment.field_save_me
+field_name: field_save_me
+entity_type: comment
+bundle: comment
+label: 'Save my name, email, and website in this browser for the next time I comment.'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

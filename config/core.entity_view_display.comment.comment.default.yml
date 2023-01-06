@@ -7,6 +7,7 @@ dependencies:
     - field.field.comment.comment.comment_body
     - field.field.comment.comment.field_comment_name
     - field.field.comment.comment.field_email
+    - field.field.comment.comment.field_save_me
     - field.field.comment.comment.field_website
   module:
     - link
@@ -39,6 +40,16 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  field_save_me:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
   field_website:
     type: link
     label: inline
@@ -56,4 +67,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  breadcrumbs: true
