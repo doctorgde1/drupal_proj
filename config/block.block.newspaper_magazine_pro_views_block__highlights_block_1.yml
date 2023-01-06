@@ -12,7 +12,7 @@ dependencies:
 id: newspaper_magazine_pro_views_block__highlights_block_1
 theme: newspaper_magazine_pro
 region: full_width_blocks_first
-weight: -17
+weight: -16
 provider: null
 plugin: 'views_block:highlights-block_1'
 settings:

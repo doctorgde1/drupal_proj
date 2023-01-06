@@ -1,0 +1,12 @@
+/**
+* @file
+* Layout for most popular view
+*/
+
+.most-popular-view {
+  gap: rem(24);
+
+  .views-col {
+    gap: rem(24);
+  }
+}

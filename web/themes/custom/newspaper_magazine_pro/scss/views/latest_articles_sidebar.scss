@@ -1,0 +1,23 @@
+/**
+* @file
+* Layout for most popular view
+*/
+
+.latest-articles-sidebar-view {
+  gap: rem(24);
+
+  .views-infinite-scroll-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  .views-col {
+    gap: rem(24);
+  }
+
+  .pager {
+    display: flex;
+    justify-content: center;
+  }
+}

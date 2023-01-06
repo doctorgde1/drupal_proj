@@ -1,0 +1,17 @@
+/**
+* @file
+* Layout for global news view
+*/
+
+.global-news-view {
+  display: flex;
+
+  .view-wrap {
+    display: flex;
+    gap: rem(24);
+  }
+
+  .views-col {
+    gap: rem(24);
+  }
+}

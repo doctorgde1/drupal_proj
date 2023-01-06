@@ -243,6 +243,19 @@ display:
           view_mode: full
           tokenize: true
           bypass_access: false
+        entity_block_content:
+          id: entity_block_content
+          table: views
+          field: entity_block_content
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: false
+          target: 1c84a9c3-d78c-48a5-9425-4a1d848d5b77
+          view_mode: default
+          tokenize: true
+          bypass_access: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -337,34 +350,7 @@ display:
         options: {  }
       defaults:
         title: false
-        header: false
-      header:
-        entity_taxonomy_term:
-          id: entity_taxonomy_term
-          table: views
-          field: entity_taxonomy_term
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: true
-          target: '{{ raw_arguments.tid }}'
-          view_mode: full
-          tokenize: true
-          bypass_access: false
-        entity_block_content:
-          id: entity_block_content
-          table: views
-          field: entity_block_content
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: false
-          target: 1c84a9c3-d78c-48a5-9425-4a1d848d5b77
-          view_mode: default
-          tokenize: true
-          bypass_access: false
+        header: true
       display_extenders: {  }
       block_description: 'Lifestyle Highlights'
     cache_metadata:
