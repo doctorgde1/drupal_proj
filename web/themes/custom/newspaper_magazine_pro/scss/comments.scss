@@ -1,0 +1,92 @@
+.content section.field--type-comment {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-family: Rubik, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px !important;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-item {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .button {
+      font-family: Rubik, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      text-transform: uppercase;
+      background-color: #222;
+      border-radius: 0;
+      color: white;
+      border: none;
+      transition: background-color .4s;
+      padding: 8px 15px;
+      background-image: unset;
+
+      &:hover {
+        background-color: #008d7f;
+      }
+    }
+
+    .filter-wrapper,
+    .description,
+    .field--type-language {
+      display: none;
+    }
+
+    .js-form-type-email,
+    .js-form-type-textfield,
+    .js-form-type-url,
+    .js-form-type-textarea {
+      position: relative;
+
+      label {
+        position: absolute;
+        top: 6px;
+        left: 9px;
+        color: #747474;
+        font-size: 12px;
+
+        &::after {
+          content: '*';
+          color: #747474;
+          background-image: unset;
+          position: absolute;
+        }
+      }
+
+      input {
+        min-height: 34px;
+        width: 100%;
+        border-radius: unset;
+      }
+    }
+
+    .js-form-type-textarea,
+    .js-form-type-url {
+      label::after {
+        content: unset;
+      }
+
+      textarea {
+        height: 168px;
+        min-height: 168px;
+      }
+    }
+
+    .form-actions {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

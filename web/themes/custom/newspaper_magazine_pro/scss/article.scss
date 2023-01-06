@@ -1,0 +1,94 @@
+.node--type-article {
+  margin-bottom: 48px;
+
+  .field--name-field-category {
+    font-family: Rubik, sans-serif;
+    margin: 0 5px 5px 0;
+
+    a:hover {
+      color: #dd3333;
+    }
+  }
+
+  h2 {
+    margin-top: 10px !important;
+    margin-bottom: 16px !important;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    a:hover {
+      cursor: unset;
+      color: black;
+    }
+  }
+
+  .field--name-field-article-tags {
+    display: flex;
+    gap: 5px;
+
+    .field__item {
+      font-family: 'Open Sans', 'Open Sans Regular', sans-serif;
+      padding: 1px 7px 2px;
+      border: 1px solid #ededed;
+      color: black;
+      font-size: 11px;
+
+      &:first-of-type {
+        text-transform: uppercase;
+        background-color: black;
+        border: 1px solid black;
+
+        a {
+          color: white;
+        }
+
+        &:hover {
+          background-color: black;
+          cursor: unset;
+          border-color: black;
+        }
+      }
+
+      &:hover {
+        background-color: #008d7f;
+        border-color: #008d7f;
+        color: white;
+      }
+    }
+  }
+
+  .author_info {
+    display: flex;
+    align-items: center;
+    font-family: Rubik, sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #444;
+    margin-bottom: 36px;
+
+    .field--name-user-picture {
+      width: 26px;
+      height: 26px;
+      margin-right: 5px;
+    }
+
+    span {
+      color: black;
+      margin-right: 10px;
+      margin-left: 3px;
+      font-weight: 600;
+
+      a:hover {
+        color: #008d7f;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 464px;
+  }
+}
