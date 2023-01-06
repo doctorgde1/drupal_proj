@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.social_link.field_amount_of_fol
     - field.field.paragraph.social_link.field_fol
+    - field.field.paragraph.social_link.field_icon
     - field.field.paragraph.social_link.field_soc
     - paragraphs.paragraphs_type.social_link
   module:
@@ -17,14 +18,22 @@ mode: default
 content:
   field_amount_of_fol:
     type: number
-    weight: 1
+    weight: 2
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_fol:
     type: text_textfield
-    weight: 2
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon:
+    type: string_textfield
+    weight: 0
     region: content
     settings:
       size: 60
@@ -32,7 +41,7 @@ content:
     third_party_settings: {  }
   field_soc:
     type: link_default
-    weight: 0
+    weight: 1
     region: content
     settings:
       placeholder_url: ''

@@ -1,11 +1,10 @@
-uuid: 07aaa135-0a75-45a5-951d-4e03661127e6
+uuid: ca1dda64-9054-495c-9b23-4b5ac73085b4
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.related_articles
   module:
-    - system
     - views
   theme:
     - newspaper_magazine_pro
@@ -22,8 +21,4 @@ settings:
   provider: views
   views_label: ''
   items_per_page: none
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '/*/*/*'
+visibility: {  }

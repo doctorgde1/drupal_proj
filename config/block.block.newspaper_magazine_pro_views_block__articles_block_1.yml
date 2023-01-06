@@ -20,7 +20,6 @@ settings:
   label: ''
   label_display: '0'
   provider: views
-  context_mapping: {  }
   views_label: ''
   items_per_page: none
 visibility:

@@ -1,0 +1,21 @@
+uuid: d030fb13-7ced-473c-a1ea-e8d9ddfde7d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.image_description_horizontal
+  module:
+    - text
+id: paragraph.image_description_horizontal.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: image_description_horizontal
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
