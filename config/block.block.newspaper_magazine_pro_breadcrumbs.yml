@@ -8,8 +8,8 @@ dependencies:
     - newspaper_magazine_pro
 id: newspaper_magazine_pro_breadcrumbs
 theme: newspaper_magazine_pro
-region: breadcrumbs
-weight: -17
+region: full_width_blocks_first
+weight: -18
 provider: null
 plugin: system_breadcrumb_block
 settings:

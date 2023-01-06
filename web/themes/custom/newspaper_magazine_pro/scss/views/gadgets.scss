@@ -1,0 +1,13 @@
+/**
+* @file
+* Layout for gadgets view
+*/
+
+.gadgets-view {
+  gap: rem(24);
+  width: min-content;
+
+  .views-row {
+    gap: rem(5);
+  }
+}

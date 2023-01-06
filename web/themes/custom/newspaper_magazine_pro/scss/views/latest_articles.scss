@@ -1,0 +1,24 @@
+/**
+* @file
+* Layout for latest articles view
+*/
+
+.latest-articles-view {
+
+  .views-view-grid {
+    gap: rem(24);
+  }
+
+  .views-col {
+    flex: 1 1 auto;
+    gap: rem(24);
+  }
+
+  .views-row {
+    flex: 0 0 33.333%;
+  }
+
+  .pager {
+    margin-top: rem(24 * 3);
+  }
+}

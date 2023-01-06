@@ -1,0 +1,39 @@
+/**
+* @file
+* Layout for categories view
+*/
+
+.categories-view {
+  .view-content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(5);
+
+    .views-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      line-height: rem(30);
+      .views-field {
+        &:first-child {
+          font-size: rem(15);
+        }
+
+        &:last-child {
+          font-size: rem(13);
+        }
+      }
+      
+      &:hover {
+        a,
+        span {
+          color: #008d7f;
+        }
+      }
+    }
+    
+    span {
+      display: block;
+    }
+  }
+}

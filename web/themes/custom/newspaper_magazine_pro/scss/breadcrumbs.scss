@@ -1,0 +1,35 @@
+/**
+* @file
+* Layout for breadcrumbs
+*/
+
+.breadcrumb {
+  padding: 0;
+  
+  ol {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+    font-size: rem(12);
+    line-height: rem(18);
+    color: #747;
+
+    a {
+      color: #747;
+    }
+
+    &:not(:first-child) {
+      &:before {
+        content: '>';
+        font-size: rem(8);
+        line-height: 1;
+      }
+    }
+  }
+}
