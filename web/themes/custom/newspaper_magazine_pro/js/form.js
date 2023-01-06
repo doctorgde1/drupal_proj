@@ -5,8 +5,10 @@
     },ChangeText: function () {
       jQuery("document").ready(function($){
         let button = $('.comment-form .button');
-        console.log(button);
+        let title = jQuery('.comment-wrapper .title');
+
         button.val('Post Comment');
+        title.text('LEAVE A REPLY');
       });
     }
   };

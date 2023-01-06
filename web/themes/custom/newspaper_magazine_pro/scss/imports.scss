@@ -9,7 +9,8 @@
 @import "footer.scss";
 @import 'sidebar_advertisement.scss';
 @import "article.scss";
-@import "comments.scss";
+@import "block/comments";
+@import "block/stay_contented";
 /* Import view modes styles */
 @import 'view_modes/defaults.scss';
 @import 'view_modes/most_popular.scss';
