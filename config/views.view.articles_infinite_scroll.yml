@@ -1,4 +1,4 @@
-uuid: 8a2f6568-3b0a-4966-b70b-5ac57ba1a850
+uuid: 00ec01db-2e13-405c-96c5-fb1e11cb58ae
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,9 @@ dependencies:
   module:
     - node
     - user
-id: articles
-label: Articles
+    - views_infinite_scroll
+id: articles_infinite_scroll
+label: 'Articles Infinite scroll'
 module: views
 description: ''
 tag: ''
@@ -88,10 +89,27 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: infinite_scroll
         options:
           offset: 0
           items_per_page: 1
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: true
+            initially_load_all_pages: false
       exposed_form:
         type: basic
         options:
@@ -147,7 +165,7 @@ display:
             fail: 'not found'
           validate_options: {  }
           break_phrase: false
-          not: false
+          not: true
       filters:
         status:
           id: status
@@ -209,6 +227,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -225,6 +244,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

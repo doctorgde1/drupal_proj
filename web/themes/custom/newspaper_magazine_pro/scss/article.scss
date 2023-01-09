@@ -31,6 +31,8 @@
 
 .node--type-article {
   .field--name-field-category {
+    display: flex;
+    gap: 10px;
     font-family: Rubik, sans-serif;
     margin: 0 5px 5px 0;
 
@@ -45,11 +47,6 @@
     font-size: 36px;
     line-height: 1.2;
     font-weight: 500;
-
-    a:hover {
-      cursor: unset;
-      color: black;
-    }
   }
 
   h3 {
@@ -138,6 +135,4 @@
 
 .active-bottom {
   position: relative;
-  //position: absolute;
-  //top: 2115px;
 }
