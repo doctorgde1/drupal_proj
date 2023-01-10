@@ -1,0 +1,96 @@
+[id = "block-newspaper-magazine-pro-stayconnected"] {
+  .block-title {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    margin-left: 8px;
+
+    h2 {
+      order: 1;
+      font-family: Rubik, sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase;
+      overflow: hidden;
+      margin-bottom: 18px;
+      flex: 0 0 fit-content;
+    }
+
+    &::after {
+      content: '';
+      order: 2;
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: #dd3333;
+      margin-left: 20px;
+    }
+  }
+}
+
+.field--name-field-soc {
+  display: flex;
+
+  & > .field__item {
+    width: 33.3%;
+    position: relative;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #ededed;
+    margin: 0 8px 16px;
+    padding: 10px;
+
+    .field--name-field-amount-of-fol {
+      font-family: 'Open Sans', arial, sans-serif;
+      font-size: 17px;
+      line-height: 21px;
+      font-weight: 700;
+    }
+
+    .field--type-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      font-size: 0;
+    }
+  }
+}
+
+.facebook,
+.twitter,
+.youtube {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  font-size: 0;
+  margin: 0 auto;
+}
+
+.facebook::before,
+.twitter::before,
+.youtube:before {
+  content: "";
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.facebook::before {
+  background-image: url("../icons/social-links/facebook.svg");
+  filter: invert(44%) sepia(16%) saturate(1461%) hue-rotate(183deg) brightness(93%) contrast(93%);
+}
+
+.twitter::before {
+  background-image: url("../icons/social-links/twitter.svg");
+  filter: invert(66%) sepia(69%) saturate(1400%) hue-rotate(159deg) brightness(96%) contrast(101%);
+}
+
+.youtube::before {
+  background-image: url("../icons/social-links/youtube.svg");
+  filter: invert(31%) sepia(83%) saturate(1575%) hue-rotate(340deg) brightness(98%) contrast(79%);
+}

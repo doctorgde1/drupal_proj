@@ -8,7 +8,6 @@ dependencies:
   module:
     - node
     - user
-    - views_infinite_scroll
 id: articles
 label: Articles
 module: views
@@ -89,27 +88,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: infinite_scroll
+        type: some
         options:
           offset: 0
           items_per_page: 1
-          total_pages: null
-          id: 0
-          tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          views_infinite_scroll:
-            button_text: ''
-            automatically_load_content: true
-            initially_load_all_pages: false
       exposed_form:
         type: basic
         options:
@@ -165,7 +147,7 @@ display:
             fail: 'not found'
           validate_options: {  }
           break_phrase: false
-          not: true
+          not: false
       filters:
         status:
           id: status
@@ -227,7 +209,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -244,7 +225,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

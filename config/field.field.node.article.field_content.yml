@@ -6,7 +6,9 @@ dependencies:
     - field.storage.node.field_content
     - node.type.article
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_description_horizontal
     - paragraphs.paragraphs_type.photo_with_text
+    - paragraphs.paragraphs_type.social_link
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
@@ -26,14 +28,22 @@ settings:
     target_bundles:
       image: image
       text: text
+      image_description_horizontal: image_description_horizontal
       photo_with_text: photo_with_text
+      social_link: social_link
     negate: 0
     target_bundles_drag_drop:
       image:
         weight: 6
         enabled: true
+      image_description_horizontal:
+        weight: 7
+        enabled: true
       photo_with_text:
         weight: 7
+        enabled: true
+      social_link:
+        weight: 9
         enabled: true
       text:
         weight: 6

@@ -7,3 +7,4 @@ global-scripts:
   version: 1.x
   js:
     dist/main.js: {}
+    js/form.js: {}

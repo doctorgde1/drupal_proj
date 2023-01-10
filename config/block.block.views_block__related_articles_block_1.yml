@@ -1,27 +1,25 @@
-uuid: 14d2148a-e233-461c-8573-98b8aff9f260
+uuid: ca1dda64-9054-495c-9b23-4b5ac73085b4
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.articles
+    - views.view.related_articles
   module:
     - node
     - views
   theme:
     - newspaper_magazine_pro
-id: newspaper_magazine_pro_views_block__articles_block_1
+id: views_block__related_articles_block_1
 theme: newspaper_magazine_pro
 region: content_first
-weight: -13
+weight: 0
 provider: null
-plugin: 'views_block:articles-block_1'
+plugin: 'views_block:related_articles-block_1'
 settings:
-  id: 'views_block:articles-block_1'
+  id: 'views_block:related_articles-block_1'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
-  context_mapping:
-    nid: '@node.node_route_context:node'
   views_label: ''
   items_per_page: none
 visibility:
