@@ -1,6 +1,6 @@
 name: Drupal coding standards
 
-on: [push_request]
+on: [pull_request]
 
 jobs:
   phpcs-drupal:
