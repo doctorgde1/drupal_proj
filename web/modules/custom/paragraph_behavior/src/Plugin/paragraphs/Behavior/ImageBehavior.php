@@ -11,11 +11,6 @@ use Drupal\paragraphs\ParagraphInterface;
 use Drupal\paragraphs\ParagraphsBehaviorBase;
 
 /**
- * @file
- * Additional behavior for paragraph "Photo with text" type.
- */
-
-/**
  * Class provides image behavior for "Photo with text" paragraph type.
  *
  * Setting can be enabled on paragraph type configuration page.
@@ -40,7 +35,7 @@ class ImageBehavior extends ParagraphsBehaviorBase {
    * {@inheritdoc}
    */
   public function view(array &$build, Paragraph $paragraphs_entity, EntityViewDisplayInterface $display, $view_mode): void {
-    $image_position = $paragraphs_entity->getBehaviorSetting($this->getPluginId(), 'image_position');
+    $image_position = $paragraphs_entity->getBehaviorSetting($this->getPluginId(), 'image_position', 'left');
     $class = 'paragraph-' . $paragraphs_entity->bundle() . ($view_mode == 'default' ? '' : '-$view_mode') . '--image-position-' . $image_position;
     $build['#attributes']['class'][] = Html::getClass($class);
     $build['#attributes']['class'][] = Html::getClass('clearfix');
