@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function currency_exchange_rates_theme($existing, $type, $theme, $path) {
+  return [
+    'currency_exchange_rates_template' => [
+      'variables' => [
+        'data' => NULL,
+      ],
+    ],
+  ];
+}

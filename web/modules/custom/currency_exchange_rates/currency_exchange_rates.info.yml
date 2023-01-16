@@ -1,0 +1,5 @@
+name: "Currency exchange rates"
+type: module
+description: "Adds block with currency exchange rates"
+package: Custom
+core_version_requirement: ^8 || ^9
