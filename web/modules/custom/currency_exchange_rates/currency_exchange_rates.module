@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Contains currency_exchange_rates.module.
+ */
+
+/**
  * Implements hook_theme().
  */
 function currency_exchange_rates_theme($existing, $type, $theme, $path) {
