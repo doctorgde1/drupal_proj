@@ -1,0 +1,7 @@
+openexchangerates_api_key: ''
+# historical:
+#   enabled: false
+#   start: ''
+#   end: '`r format(Sys.Date(), "%Y-%m-%d"`'
+# base: 'USD'
+currencies: ['']

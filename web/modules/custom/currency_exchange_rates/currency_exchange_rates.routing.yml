@@ -1,0 +1,7 @@
+currency_exchange_rates.settings:
+  path: '/admin/config/currency_exchange_rates'
+  defaults:
+    _form: '\Drupal\currency_exchange_rates\Form\CurrencySettingsForm'
+    _title: 'Currency Block Configuration'
+  requirements:
+    _permission: 'administer site configuration'
