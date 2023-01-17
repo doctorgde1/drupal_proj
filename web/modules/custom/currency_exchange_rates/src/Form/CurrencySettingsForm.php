@@ -57,7 +57,7 @@ class CurrencySettingsForm extends ConfigFormBase {
     parent::submitForm($form, $form_state);
 
     $this->config('currency_exchange_rates.settings')
-      ->set('openexchangerates_api_url', $form_state->getValue('openexchangerates_api_key'))
+      ->set('openexchangerates_api_url', $form_state->getValue('openexchangerates_api_url'))
       ->save();
   }
 
