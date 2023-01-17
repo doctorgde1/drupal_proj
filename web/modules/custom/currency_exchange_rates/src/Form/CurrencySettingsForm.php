@@ -41,8 +41,6 @@ class CurrencySettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Openexchangerates API url'),
       '#description' => $this->t('Enter your openexchangerates API url.') . ' ' . '<a href="https://docs.openexchangerates.org">' . $this->t('Site Link') . '</a>',
-      '#maxlength' => 64,
-      '#size' => 64,
       '#required' => TRUE,
       '#default_value' => $config->get('openexchangerates_api_url'),
     ];
