@@ -2,9 +2,10 @@
 
 namespace Drupal\currency_exchange_rates\Plugin\Block;
 
-use Drupal\Component\Serialization\Json;
 use Drupal\Core\Block\BlockBase;
-use GuzzleHttp\Exception\RequestException;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\currency_exchange_rates\Service\CurrencyService;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a "Currency exchange rates" block.
@@ -15,24 +16,54 @@ use GuzzleHttp\Exception\RequestException;
  * category = @Translation("Currency"),
  * )
  */
-class CurrencyBlock extends BlockBase {
+class CurrencyBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
+  /**
+   * Stores CurrencyService object.
+   *
+   * @var object
+   */
+  protected $currencyApi;
+
+  /**
+   * Constructs a new CurrencyBlock object.
+   *
+   * @param array $configuration
+   *   A configuration array containing information about the plugin instance.
+   * @param string $plugin_id
+   *   The plugin ID for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\currency_exchange_rates\Service\CurrencyService $currency_api
+   *   Currency service to work with api.
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrencyService $currency_api) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->currencyApi = $currency_api;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): CurrencyBlock {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('currency_block')
+    );
+  }
 
   /**
    * {@inheritdoc}
    */
   public function build(): array {
-    $http_client = \Drupal::httpClient();
     try {
-      $apiUrl = 'https://openexchangerates.org/api/latest.json/?app_id=b023cacbf2d44a7890cae4633758a986';
-      $response = $http_client->request('GET', $apiUrl);
+      $data = $this->currencyApi->getData();
     }
-    catch (RequestException $e) {
-      echo $e->getMessage();
+    catch (\Exception $e) {
+      $data = [];
     }
-
-    $content = $response->getBody()->getContents();
-    $data = Json::decode($content);
-
     return [
       '#theme' => 'currency_exchange_rates_template',
       '#data' => $data,
