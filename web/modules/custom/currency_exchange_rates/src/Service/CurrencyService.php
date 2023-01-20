@@ -88,10 +88,10 @@ class CurrencyService {
    */
   public function validateJson($data): void {
     try {
-      if (!array_search('rates', $data)) {
+      if (!array_key_exists('rates', $data)) {
         throw new \Exception("Invalid API url. Could not find 'rates' element in json output", 0);
       }
-      if (preg_grep('/^[A-Z]{3}$/', $data['rates'], PREG_GREP_INVERT) != []) {
+      if (preg_grep('/^[A-Z]{3}$/', $data['rates'], PREG_GREP_INVERT) == []) {
         throw new \Exception("Invalid API url. Could not find 'currencies' in 'rates' element.", 0);
       }
     }
