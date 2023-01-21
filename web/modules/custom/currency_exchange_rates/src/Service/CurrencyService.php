@@ -36,13 +36,6 @@ class CurrencyService {
   private $logger;
 
   /**
-   * Stores response from API.
-   *
-   * @var array
-   */
-  private $response;
-
-  /**
    * Constructs new CurrencyService object.
    */
   public function __construct(GuzzleHttpClient $http_client, ConfigFactory $configs, LoggerChannelFactoryInterface $logger) {
@@ -63,10 +56,9 @@ class CurrencyService {
   /**
    * Fetch openexchangerates API by using url from settings.
    */
-  public function fetchApi($url = ""): void {
+  public function fetchApi(string $url) {
     try {
-      $url = "" ? $this->configs->get('openexchangerates_api_url') : $url;
-      $this->response = $this->httpClient->request('GET', $url);
+      return $this->httpClient->request('GET', $url);
     }
     catch (\Exception $e) {
       $this->logger->get('currency_exchange_rates')->error($e->getMessage());
@@ -104,14 +96,17 @@ class CurrencyService {
   /**
    * Get currencies from api.
    */
-  public function getData($url = ""): array {
+  public function getData(string $url = ""): array {
     try {
-      $this->fetchApi($url);
+      if ($url == "") {
+        $url = $this->configs->get('openexchangerates_api_url');
+      }
 
-      $content = $this->response->getBody()->getContents();
+      $response = $this->fetchApi($url);
+
+      $content = $response->getBody()->getContents();
       $data = json_decode($content, TRUE);
 
-      $this->validateJson($data);
       return $data;
     }
     catch (\Exception $e) {
