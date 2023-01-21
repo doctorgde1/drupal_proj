@@ -67,24 +67,27 @@ class CurrencyService {
   }
 
   /**
-   * Checks if the json output matches the expected structure.
-   *
-   * Example of the expected output:
-   * ...
-   *
-   * "rates": {
-   *  "USD": 1.31730,
-   *  "EUR": 1.21730,
-   *   ...
-   * }
+   * Checks if data has given key.
    */
-  public function validateJson($data): void {
+  public function findKey(array $data, string $key): void {
     try {
-      if (!array_key_exists('rates', $data)) {
-        throw new \Exception("Invalid API url. Could not find 'rates' element in json output", 0);
+      if (!array_key_exists($key, $data)) {
+        throw new \Exception("Invalid API url. Could not find '$key' in data.", 0);
       }
-      if (preg_grep('/^[A-Z]{3}$/', $data['rates'], PREG_GREP_INVERT) == []) {
-        throw new \Exception("Invalid API url. Could not find 'currencies' in 'rates' element.", 0);
+    }
+    catch (\Exception $e) {
+      $this->logger->get('currency_exchange_rates')->error($e->getMessage());
+      throw $e;
+    }
+  }
+
+  /**
+   * Checks if data matches the expected structure.
+   */
+  public function matchStruct(array $data, string $regex, string $error_message): void {
+    try {
+      if (preg_grep($regex, $data, PREG_GREP_INVERT) == []) {
+        throw new \Exception("Invalid API url. Could not find '$error_message' in data.", 0);
       }
     }
     catch (\Exception $e) {
