@@ -90,7 +90,10 @@ class CurrencySettingsForm extends ConfigFormBase {
       $this->currencyApi->matchStruct($data['rates'], "/^[A-Z]{3}$/", 'currencies');
     }
     catch (\Exception $e) {
-      $error_message = $this->t('Error code') . ': ' . $e->getCode() . ' . ' . $this->t($e->getMessage());
+      $error_message = $this->t('Error code: %error-code. %error-message.', [
+        '%error-code' => $e->getCode(),
+        '%error-message' => $e->getMessage(),
+      ]);
       $form_state->setErrorByName('openexchangerates_api_url', $error_message);
     }
   }
