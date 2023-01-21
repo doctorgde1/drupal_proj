@@ -4,6 +4,8 @@ namespace Drupal\currency_exchange_rates\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\currency_exchange_rates\Service\CurrencyService;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class CurrencyBlockConfig provides config form.
@@ -15,6 +17,32 @@ use Drupal\Core\Form\FormStateInterface;
  * And checkbox to chose currencies for api query.
  */
 class CurrencySettingsForm extends ConfigFormBase {
+
+  /**
+   * Stores CurrencyService object.
+   *
+   * @var object
+   */
+  protected $currencyApi;
+
+  /**
+   * Class constructor.
+   *
+   * @param \Drupal\currency_exchange_rates\Service\CurrencyService $currency_api
+   *   Currency service to work with api.
+   */
+  public function __construct(CurrencyService $currency_api) {
+    $this->currencyApi = $currency_api;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container): CurrencySettingsForm {
+    return new static(
+    $container->get('currency_block')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -46,6 +74,25 @@ class CurrencySettingsForm extends ConfigFormBase {
     ];
 
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state): void {
+    try {
+      $url = $form_state->getValue('openexchangerates_api_url');
+
+      $data = $this->currencyApi->getData($url);
+
+      $this->currencyApi->findKey($data, "rates");
+
+      $this->currencyApi->matchStruct($data['rates'], "/^[A-Z]{3}$/", 'currencies');
+    }
+    catch (\Exception $e) {
+      $error_message = $this->t('Error code') . ': ' . $e->getCode() . ' . ' . $this->t($e->getMessage());
+      $form_state->setErrorByName('openexchangerates_api_url', $error_message);
+    }
   }
 
   /**
