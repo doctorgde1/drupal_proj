@@ -99,22 +99,68 @@ class CurrencyService {
   /**
    * Get currencies from api.
    */
-  public function getData(string $url = ""): array {
+  public function getData(string $url = "", array $params = []): array {
     try {
       if ($url == "") {
         $url = $this->configs->get('openexchangerates_api_url');
       }
+
+      $url = $this->addParamToUrl($url, $params);
 
       $response = $this->fetchApi($url);
 
       $content = $response->getBody()->getContents();
       $data = json_decode($content, TRUE);
 
+      $this->findKey($data, "rates");
+      $this->findKey($data, "timestamp");
+
       return $data;
     }
     catch (\Exception $e) {
       throw $e;
     }
+  }
+
+  /**
+   * Get currencies catalog.
+   */
+  public function getCurrenciesCatalog(string $url = ""): array {
+    try {
+      if ($url == "") {
+        $url = $this->configs->get('currencies_catalog_url');
+      }
+
+      $response = $this->fetchApi($url);
+
+      $content = $response->getBody()->getContents();
+
+      $data = json_decode($content, TRUE);
+
+      $this->matchStruct($data, "/^[A-Z]{3}$/", 'currencies');
+
+      return $data;
+    }
+    catch (\Exception $e) {
+      throw $e;
+    }
+  }
+
+  /**
+   * Adds params to url.
+   */
+  private function addParamToUrl(string $url, array $params): string {
+    foreach ($params as $param_name => $param_values) {
+      $url .= "&$param_name=";
+
+      $param_values = array_unique($param_values);
+
+      foreach ($param_values as $param_value) {
+        $url .= "$param_value,";
+      }
+      $url = rtrim($url, ',');
+    }
+    return $url;
   }
 
 }
