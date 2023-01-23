@@ -113,7 +113,7 @@ class CurrencySettingsForm extends ConfigFormBase {
 
       $data = $this->currencyApi->getData($url, $params);
 
-      if ($checked_checkboxes != []) {
+      if ($chosen_currencies != []) {
         $this->currencyApi->matchStruct($data['rates'], "/^[A-Z]{3}$/", 'currencies');
       }
     }

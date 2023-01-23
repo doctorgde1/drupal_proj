@@ -72,7 +72,11 @@ class CurrencyDataBaseService {
    * Insert currencies into database.
    */
   public function queryInsertCurrencies(array $rates, int $timestamp): void {
-    $query = $this->database->insert('daily_currencies')->fields(['symbol', 'rate', 'date']);
+    $query = $this->database->insert('daily_currencies')->fields([
+      'symbol',
+      'rate',
+      'date',
+    ]);
     foreach ($rates as $symbol => $rate) {
       $query->values([
         'symbol' => $symbol,
