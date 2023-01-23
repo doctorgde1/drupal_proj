@@ -136,7 +136,7 @@ class CurrencySettingsForm extends ConfigFormBase {
 
     if (array_key_exists("currencies_catalog_url", $form)) {
       try {
-        $available_currencies = $this->currencyApi->getCurrenciesCatalog($form_state->getValue('currencies_catalog_url'));
+        $this->currencyApi->getCurrenciesCatalog($form_state->getValue('currencies_catalog_url'));
       }
       catch (\Exception $e) {
         $error_message = $this->t('Error code: %error-code. %error-message.', [
