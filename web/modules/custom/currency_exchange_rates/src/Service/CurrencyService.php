@@ -115,7 +115,7 @@ class CurrencyService {
 
       $this->findKey($params, "symbols");
       $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
-      if (empty($database_data)) {
+      if (empty($database_data) && !empty($params["symbols"])) {
         // $url = $this->addParamToUrl($url, $params);
         $response = $this->fetchApi($url);
 
