@@ -163,4 +163,14 @@ class CurrencyService {
     return $url;
   }
 
+  /**
+   * Deletes 0-s from array.
+   */
+  public function trimArrayZeroes($array): array {
+    $array = array_values($array);
+    $array = array_unique($array);
+    array_pop($array);
+    return $array;
+  }
+
 }
