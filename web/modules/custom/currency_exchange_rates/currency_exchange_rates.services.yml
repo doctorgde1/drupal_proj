@@ -1,0 +1,7 @@
+services:
+  currency_block:
+    class: Drupal\currency_exchange_rates\Service\CurrencyService
+    arguments: ['@http_client', '@config.factory', '@logger.factory', '@currency_database']
+  currency_database:
+    class: Drupal\currency_exchange_rates\Service\CurrencyDataBaseService
+    arguments: ['@logger.factory', '@database']
