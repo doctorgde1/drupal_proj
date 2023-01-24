@@ -1,0 +1,8 @@
+name: Paragraph Behavior
+type: module
+description: 'Provides behavior where you can specify whether image floats
+  left or right relative text'
+package: Custom
+core_version_requirement: ^8 || ^9
+dependencies:
+  paragraphs: paragraphs

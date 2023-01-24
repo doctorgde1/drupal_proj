@@ -1,10 +1,14 @@
 uuid: 2b3ac09b-7677-4f01-b07e-70984a28d847
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraph_behavior
 id: photo_with_text
 label: 'Photo Text'
 icon_uuid: null
 icon_default: null
 description: ''
-behavior_plugins: {  }
+behavior_plugins:
+  paragraphs_behavior:
+    enabled: true

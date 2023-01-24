@@ -1,0 +1,52 @@
+/**
+* @file
+* Layout for paragraphs image behavior
+*/
+
+.paragraph-photo-with-text--image-position {
+  &-left {
+    .clearfix::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+
+    .field--name-field-image {
+      float: left;
+      width: 45%;
+      margin-right: rem(24);
+      margin-bottom: rem(8);
+      img {
+        object-fit: cover;
+        margin: 0;
+      }
+    }
+
+    .field--name-field-text {
+      text-align: justify;
+    }
+  }
+
+  &-right {
+    .clearfix::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+
+    .field--name-field-image {
+      float: right;
+      width: 45%;
+      margin-left: rem(24);
+      margin-bottom: rem(8);
+      img {
+        object-fit: cover;
+        margin: 0;
+      }
+    }
+
+    .field--name-field-text {
+      text-align: justify;
+    }
+  }
+}
