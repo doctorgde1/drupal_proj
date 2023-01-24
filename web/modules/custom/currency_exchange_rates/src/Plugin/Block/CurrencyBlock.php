@@ -72,7 +72,9 @@ class CurrencyBlock extends BlockBase implements ContainerFactoryPluginInterface
   public function build(): array {
     try {
       $url = $this->configs->get('openexchangerates_api_url');
-      $params = ["symbols" => array_values($this->configs->get('chosen_currencies'))];
+      $chosen_currencies = array_values($this->configs->get('chosen_currencies'));
+      $chosen_currencies = $this->currencyApi->trimArrayZeroes($chosen_currencies);
+      $params = ["symbols" => $chosen_currencies];
       $data = $this->currencyApi->getData($url, $params);
     }
     catch (\Exception $e) {

@@ -61,16 +61,6 @@ class CurrencySettingsForm extends ConfigFormBase {
   }
 
   /**
-   * Deletes 0-s from checkboxes.
-   */
-  public function trimCheckboxes($checkboxes): array {
-    $checkboxes = array_values($checkboxes);
-    $checkboxes = array_unique($checkboxes);
-    array_pop($checkboxes);
-    return $checkboxes;
-  }
-
-  /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
@@ -117,12 +107,13 @@ class CurrencySettingsForm extends ConfigFormBase {
   public function validateForm(array &$form, FormStateInterface $form_state): void {
     try {
       $url = $form_state->getValue('openexchangerates_api_url');
-      $checked_checkboxes = $form_state->getValue('chosen_currencies') ?? [];
-      $params = ["symbols" => $this->trimCheckboxes($checked_checkboxes)];
+      $chosen_currencies = array_values($form_state->getValue('chosen_currencies'));
+      $chosen_currencies = $this->currencyApi->trimArrayZeroes($chosen_currencies);
+      $params = ["symbols" => $chosen_currencies];
 
       $data = $this->currencyApi->getData($url, $params);
 
-      if ($this->trimCheckboxes($checked_checkboxes) != []) {
+      if ($chosen_currencies != []) {
         $this->currencyApi->matchStruct($data['rates'], "/^[A-Z]{3}$/", 'currencies');
       }
     }

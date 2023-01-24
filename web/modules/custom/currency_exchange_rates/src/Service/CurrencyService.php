@@ -36,12 +36,20 @@ class CurrencyService {
   private $logger;
 
   /**
+   * Stores CurrencyDatabaseService object.
+   *
+   * @var object
+   */
+  private $currencyDatabase;
+
+  /**
    * Constructs new CurrencyService object.
    */
-  public function __construct(GuzzleHttpClient $http_client, ConfigFactory $configs, LoggerChannelFactoryInterface $logger) {
+  public function __construct(GuzzleHttpClient $http_client, ConfigFactory $configs, LoggerChannelFactoryInterface $logger, CurrencyDataBaseService $database) {
     $this->httpClient = $http_client;
     $this->configs = $configs->get('currency_exchange_rates.settings');
     $this->logger = $logger;
+    $this->currencyDatabase = $database;
   }
 
   /**
@@ -105,17 +113,23 @@ class CurrencyService {
         $url = $this->configs->get('openexchangerates_api_url');
       }
 
-      $url = $this->addParamToUrl($url, $params);
+      $this->findKey($params, "symbols");
+      $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
+      if (empty($database_data) && !empty($params["symbols"])) {
+        // $url = $this->addParamToUrl($url, $params);
+        $response = $this->fetchApi($url);
 
-      $response = $this->fetchApi($url);
+        $content = $response->getBody()->getContents();
+        $api_data = json_decode($content, TRUE);
 
-      $content = $response->getBody()->getContents();
-      $data = json_decode($content, TRUE);
+        $this->findKey($api_data, "rates");
+        $this->findKey($api_data, "timestamp");
 
-      $this->findKey($data, "rates");
-      $this->findKey($data, "timestamp");
+        $this->currencyDatabase->queryInsertCurrencies($api_data['rates'], $api_data['timestamp']);
 
-      return $data;
+        $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
+      }
+      return $database_data;
     }
     catch (\Exception $e) {
       throw $e;
@@ -161,6 +175,16 @@ class CurrencyService {
       $url = rtrim($url, ',');
     }
     return $url;
+  }
+
+  /**
+   * Deletes 0-s from array.
+   */
+  public function trimArrayZeroes($array): array {
+    $array = array_values($array);
+    $array = array_unique($array);
+    array_pop($array);
+    return $array;
   }
 
 }
