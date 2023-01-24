@@ -113,7 +113,7 @@ class CurrencySettingsForm extends ConfigFormBase {
       $chosen_currencies = $this->currencyApi->trimArrayZeroes($chosen_currencies);
       $params = ["symbols" => $chosen_currencies];
 
-      $data = $this->currencyApi->getData($url, $params);
+      $this->currencyApi->getData($url, $params);
     }
     catch (\Exception $e) {
       $error_message = $this->t('Error code: %error-code. %error-message.', [

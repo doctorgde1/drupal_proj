@@ -84,7 +84,7 @@ class CurrencyService {
    */
   public function findKey(array $data, string $key): void {
     if (!array_key_exists($key, $data)) {
-      $this->logger->get('currency_exchange_rates')->error($e->getMessage());
+      $this->logger->get('currency_exchange_rates')->error("Invalid API url. Could not find '$key' in data.");
       throw new \Exception("Invalid API url. Could not find '$key' in data.", 0);
     }
   }
@@ -94,7 +94,7 @@ class CurrencyService {
    */
   public function matchStruct(array $data, string $regex, string $error_message): void {
     if (preg_grep($regex, $data, PREG_GREP_INVERT) == []) {
-      $this->logger->get('currency_exchange_rates')->error($e->getMessage());
+      $this->logger->get('currency_exchange_rates')->error("Invalid API url. Could not find '$error_message' in data.");
       throw new \Exception("Invalid API url. Could not find '$error_message' in data.", 0);
     }
   }
