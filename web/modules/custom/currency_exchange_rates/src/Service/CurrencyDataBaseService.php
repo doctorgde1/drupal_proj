@@ -87,4 +87,13 @@ class CurrencyDataBaseService {
     $query->execute();
   }
 
+  /**
+   * Delete rows from table.
+   */
+  public function queryDeleteFromTable(string $column, mixed $value): void {
+    $this->database->delete('daily_currencies')
+      ->condition($column, $value)
+      ->execute();
+  }
+
 }
