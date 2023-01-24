@@ -75,7 +75,8 @@ class CurrencyBlock extends BlockBase implements ContainerFactoryPluginInterface
       $chosen_currencies = array_values($this->configs->get('chosen_currencies'));
       $chosen_currencies = $this->currencyApi->trimArrayZeroes($chosen_currencies);
       $params = ["symbols" => $chosen_currencies];
-      $data = $this->currencyApi->getData($url, $params);
+      $range = (int) $this->configs->get('date_range');
+      $data = $this->currencyApi->getData($url, $range, $params);
     }
     catch (\Exception $e) {
       $data = [];

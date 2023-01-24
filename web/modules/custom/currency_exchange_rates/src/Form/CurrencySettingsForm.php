@@ -76,6 +76,22 @@ class CurrencySettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('openexchangerates_api_url'),
     ];
 
+    $form['date_range'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Date range'),
+      '#description' => $this->t('Select in which date range currencies will be displayed from today.'),
+      '#options' => [
+        '1' => "One day",
+        '2' => "Two days",
+        '3' => "Three days",
+        '4' => "Four days",
+        '5' => "Five days",
+        '6' => "Six days",
+        '7' => "Seven days",
+      ],
+      '#default_value' => $config->get('date_range'),
+    ];
+
     try {
       $available_currencies = $this->currencyApi->getCurrenciesCatalog();
 
@@ -112,8 +128,9 @@ class CurrencySettingsForm extends ConfigFormBase {
       $chosen_currencies = array_values($form_state->getValue('chosen_currencies'));
       $chosen_currencies = $this->currencyApi->trimArrayZeroes($chosen_currencies);
       $params = ["symbols" => $chosen_currencies];
+      $range = (int) $form_state->getValue('date_range');
 
-      $this->currencyApi->getData($url, $params);
+      $this->currencyApi->getData($url, $range, $params);
     }
     catch (\Exception $e) {
       $error_message = $this->t('Error code: %error-code. %error-message.', [
@@ -155,6 +172,10 @@ class CurrencySettingsForm extends ConfigFormBase {
 
     $this->config('currency_exchange_rates.settings')
       ->set('chosen_currencies', $form_state->getValue('chosen_currencies'))
+      ->save();
+
+    $this->config('currency_exchange_rates.settings')
+      ->set('date_range', $form_state->getValue('date_range'))
       ->save();
   }
 
