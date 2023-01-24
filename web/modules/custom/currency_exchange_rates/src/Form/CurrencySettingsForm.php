@@ -107,7 +107,7 @@ class CurrencySettingsForm extends ConfigFormBase {
   public function validateForm(array &$form, FormStateInterface $form_state): void {
     try {
       $url = $form_state->getValue('openexchangerates_api_url');
-      $chosen_currencies = array_values($this->configs->get('chosen_currencies'));
+      $chosen_currencies = array_values($form_state->getValue('chosen_currencies'));
       $chosen_currencies = $this->currencyApi->trimArrayZeroes($chosen_currencies);
       $params = ["symbols" => $chosen_currencies];
 
