@@ -36,12 +36,20 @@ class CurrencyService {
   private $logger;
 
   /**
+   * Stores CurrencyDatabaseService object.
+   *
+   * @var object
+   */
+  private $currencyDatabase;
+
+  /**
    * Constructs new CurrencyService object.
    */
-  public function __construct(GuzzleHttpClient $http_client, ConfigFactory $configs, LoggerChannelFactoryInterface $logger) {
+  public function __construct(GuzzleHttpClient $http_client, ConfigFactory $configs, LoggerChannelFactoryInterface $logger, CurrencyDataBaseService $database) {
     $this->httpClient = $http_client;
     $this->configs = $configs->get('currency_exchange_rates.settings');
     $this->logger = $logger;
+    $this->currencyDatabase = $database;
   }
 
   /**
@@ -99,22 +107,84 @@ class CurrencyService {
   /**
    * Get currencies from api.
    */
-  public function getData(string $url = ""): array {
+  public function getData(string $url = "", array $params = []): array {
     try {
       if ($url == "") {
         $url = $this->configs->get('openexchangerates_api_url');
       }
 
+      $this->findKey($params, "symbols");
+      $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
+      if (empty($database_data) && !empty($params["symbols"])) {
+        // $url = $this->addParamToUrl($url, $params);
+        $response = $this->fetchApi($url);
+
+        $content = $response->getBody()->getContents();
+        $api_data = json_decode($content, TRUE);
+
+        $this->findKey($api_data, "rates");
+        $this->findKey($api_data, "timestamp");
+
+        $this->currencyDatabase->queryInsertCurrencies($api_data['rates'], $api_data['timestamp']);
+
+        $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
+      }
+      return $database_data;
+    }
+    catch (\Exception $e) {
+      throw $e;
+    }
+  }
+
+  /**
+   * Get currencies catalog.
+   */
+  public function getCurrenciesCatalog(string $url = ""): array {
+    try {
+      if ($url == "") {
+        $url = $this->configs->get('currencies_catalog_url');
+      }
+
       $response = $this->fetchApi($url);
 
       $content = $response->getBody()->getContents();
+
       $data = json_decode($content, TRUE);
+
+      $this->matchStruct($data, "/^[A-Z]{3}$/", 'currencies');
 
       return $data;
     }
     catch (\Exception $e) {
       throw $e;
     }
+  }
+
+  /**
+   * Adds params to url.
+   */
+  private function addParamToUrl(string $url, array $params): string {
+    foreach ($params as $param_name => $param_values) {
+      $url .= "&$param_name=";
+
+      $param_values = array_unique($param_values);
+
+      foreach ($param_values as $param_value) {
+        $url .= "$param_value,";
+      }
+      $url = rtrim($url, ',');
+    }
+    return $url;
+  }
+
+  /**
+   * Deletes 0-s from array.
+   */
+  public function trimArrayZeroes($array): array {
+    $array = array_values($array);
+    $array = array_unique($array);
+    array_pop($array);
+    return $array;
   }
 
 }

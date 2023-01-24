@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for Currency Exchange Rates module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function currency_exchange_rates_schema() {
+  $schema['daily_currencies'] = [
+    'description' => 'Tracks daily currency rates',
+    'fields' => [
+      'symbol' => [
+        'type' => 'varchar',
+        'length' => 3,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'rate' => [
+        'type' => 'float',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'date' => [
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+  ];
+
+  return $schema;
+}
