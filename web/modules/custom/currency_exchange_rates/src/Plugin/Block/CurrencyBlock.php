@@ -61,7 +61,7 @@ class CurrencyBlock extends BlockBase implements ContainerFactoryPluginInterface
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('currency_block'),
+      $container->get('currency_service'),
       $container->get('config.factory')
     );
   }

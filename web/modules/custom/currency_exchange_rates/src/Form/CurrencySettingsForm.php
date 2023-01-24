@@ -40,7 +40,7 @@ class CurrencySettingsForm extends ConfigFormBase {
    */
   public static function create(ContainerInterface $container): CurrencySettingsForm {
     return new static(
-    $container->get('currency_block')
+      $container->get('currency_service')
     );
   }
 
@@ -69,13 +69,15 @@ class CurrencySettingsForm extends ConfigFormBase {
     $form['openexchangerates_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Openexchangerates API url'),
-      '#description' => $this->t('Enter your openexchangerates API url.') . ' ' . '<a href="https://docs.openexchangerates.org">' . $this->t('Site Link') . '</a>',
+      '#description' => $this->t('Enter your openexchangerates API url. <a href="@api-url"> Site link </a>', [
+        '@api-url' => 'https://docs.openexchangerates.org',
+      ]),
       '#required' => TRUE,
       '#default_value' => $config->get('openexchangerates_api_url'),
     ];
 
     try {
-      $available_currencies = $this->currencyApi->getCurrenciesCatalog($config->get('currencies_catalog_url'));
+      $available_currencies = $this->currencyApi->getCurrenciesCatalog();
 
       $checked_checkboxes = $config->get('chosen_currencies') ?? [];
       $form['chosen_currencies'] = [
@@ -90,8 +92,8 @@ class CurrencySettingsForm extends ConfigFormBase {
       $form['currencies_catalog_url'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Available currencies catalog url'),
-        '#description' => $this->t('Enter new currencies catalog url. Default : <a href="%catalog-url">https://openexchangerates.org/api/currencies.json</a>', [
-          '%catalog-url' => 'https://openexchangerates.org/api/currencies.json',
+        '#description' => $this->t('Enter new currencies catalog url. Default : <a href="@catalog-url">https://openexchangerates.org/api/currencies.json</a>', [
+          '@catalog-url' => 'https://openexchangerates.org/api/currencies.json',
         ]),
         '#required' => TRUE,
         '#default_value' => $config->get('currencies_catalog_url'),
@@ -112,10 +114,6 @@ class CurrencySettingsForm extends ConfigFormBase {
       $params = ["symbols" => $chosen_currencies];
 
       $data = $this->currencyApi->getData($url, $params);
-
-      if ($chosen_currencies != []) {
-        $this->currencyApi->matchStruct($data['rates'], "/^[A-Z]{3}$/", 'currencies');
-      }
     }
     catch (\Exception $e) {
       $error_message = $this->t('Error code: %error-code. %error-message.', [
