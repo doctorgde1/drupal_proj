@@ -84,6 +84,17 @@ class CurrencyBlock extends BlockBase implements ContainerFactoryPluginInterface
     return [
       '#theme' => 'currency_exchange_rates_template',
       '#data' => $data,
+      '#attached' => [
+        'library' => [
+          'currency_exchange_rates/currency_exchange_rates',
+        ],
+        'drupalSettings' => [
+          'currency_exchange_rates' => [
+            'symbols' => $chosen_currencies,
+            'currencies_data' => $data,
+          ],
+        ],
+      ],
     ];
   }
 
