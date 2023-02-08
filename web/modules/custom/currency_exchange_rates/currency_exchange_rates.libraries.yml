@@ -1,0 +1,8 @@
+currency_exchange_rates:
+  version: 1.x
+  js:
+    /libraries/chart.js/dist/chart.umd.js: {}
+    js/currency_charts.js: {}
+    dependencies:
+      - core/jquery
+      - core/drupalSettings

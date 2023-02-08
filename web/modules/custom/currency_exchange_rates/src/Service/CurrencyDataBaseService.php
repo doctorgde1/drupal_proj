@@ -96,4 +96,23 @@ class CurrencyDataBaseService {
       ->execute();
   }
 
+  /**
+   * Get currencies by date range from database.
+   */
+  public function queryCurrenciesByDateRange(int $range, array $symbols = []): array {
+    $data = [];
+    for ($i = 0; $i < $range; $i++) {
+      $day = date_create(date('Y-m-d'));
+      date_add($day, date_interval_create_from_date_string("-$i days"));
+      $day = $day->format('Y-m-d');
+
+      $result = $this->queryCurrenciesByDate($day, $symbols);
+      if (!empty($result)) {
+        $data[$day] = $result;
+      }
+    }
+    $data = array_reverse($data);
+    return $data;
+  }
+
 }

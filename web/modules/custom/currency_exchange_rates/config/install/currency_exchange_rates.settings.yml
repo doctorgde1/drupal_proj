@@ -1,3 +1,4 @@
 openexchangerates_api_url: ''
 currencies_catalog_url: 'https://openexchangerates.org/api/currencies.json'
 chosen_currencies: []
+date_range: "1"

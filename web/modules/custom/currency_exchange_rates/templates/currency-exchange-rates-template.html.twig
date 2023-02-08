@@ -1,10 +1,3 @@
-<div class="currency-exchange-rates">
-  {% for key, value in data %}
-    {{ key }} : {{ value }}
-    <br>
-    {% for key, value in value %}
-      {{ key }} : {{ value }}
-      <br>
-    {% endfor %}
-  {% endfor %}
+<div style="width: 100%;">
+  <canvas id="currency-charts"></canvas>
 </div>
