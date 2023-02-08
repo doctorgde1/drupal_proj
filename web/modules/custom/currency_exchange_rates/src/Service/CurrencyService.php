@@ -57,16 +57,21 @@ class CurrencyService {
    */
   public static function create(ContainerInterface $container): CurrencyService {
     return new static(
-      $container->get('currency_block'),
+      $container->get('currency_service'),
     );
   }
 
   /**
    * Fetch openexchangerates API by using url from settings.
    */
-  public function fetchApi(string $url) {
+  public function fetchApi(string $url): mixed {
     try {
-      return $this->httpClient->request('GET', $url);
+      $response = $this->httpClient->request('GET', $url);
+
+      $content = $response->getBody()->getContents();
+      $api_data = json_decode($content, TRUE);
+
+      return $api_data;
     }
     catch (\Exception $e) {
       $this->logger->get('currency_exchange_rates')->error($e->getMessage());
@@ -78,14 +83,9 @@ class CurrencyService {
    * Checks if data has given key.
    */
   public function findKey(array $data, string $key): void {
-    try {
-      if (!array_key_exists($key, $data)) {
-        throw new \Exception("Invalid API url. Could not find '$key' in data.", 0);
-      }
-    }
-    catch (\Exception $e) {
-      $this->logger->get('currency_exchange_rates')->error($e->getMessage());
-      throw $e;
+    if (!array_key_exists($key, $data)) {
+      $this->logger->get('currency_exchange_rates')->error("Invalid API url. Could not find '$key' in data.");
+      throw new \Exception("Invalid API url. Could not find '$key' in data.", 0);
     }
   }
 
@@ -93,71 +93,58 @@ class CurrencyService {
    * Checks if data matches the expected structure.
    */
   public function matchStruct(array $data, string $regex, string $error_message): void {
-    try {
-      if (preg_grep($regex, $data, PREG_GREP_INVERT) == []) {
-        throw new \Exception("Invalid API url. Could not find '$error_message' in data.", 0);
-      }
-    }
-    catch (\Exception $e) {
-      $this->logger->get('currency_exchange_rates')->error($e->getMessage());
-      throw $e;
+    if (preg_grep($regex, $data, PREG_GREP_INVERT) == []) {
+      $this->logger->get('currency_exchange_rates')->error("Invalid API url. Could not find '$error_message' in data.");
+      throw new \Exception("Invalid API url. Could not find '$error_message' in data.", 0);
     }
   }
 
   /**
    * Get currencies from api.
    */
-  public function getData(string $url = "", array $params = []): array {
-    try {
-      if ($url == "") {
-        $url = $this->configs->get('openexchangerates_api_url');
-      }
-
-      $this->findKey($params, "symbols");
-      $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
-      if (empty($database_data) && !empty($params["symbols"])) {
-        // $url = $this->addParamToUrl($url, $params);
-        $response = $this->fetchApi($url);
-
-        $content = $response->getBody()->getContents();
-        $api_data = json_decode($content, TRUE);
-
-        $this->findKey($api_data, "rates");
-        $this->findKey($api_data, "timestamp");
-
-        $this->currencyDatabase->queryInsertCurrencies($api_data['rates'], $api_data['timestamp']);
-
-        $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
-      }
-      return $database_data;
+  public function getData(string $url = "", int $range = 1, array $params = []): array {
+    if ($url == "") {
+      $url = $this->configs->get('openexchangerates_api_url');
     }
-    catch (\Exception $e) {
-      throw $e;
+
+    if ($url != $this->configs->get('openexchangerates_api_url')) {
+      // $url = $this->addParamToUrl($url, $params);
+      $api_data = $this->fetchApi($url);
+
+      $this->findKey($api_data, "timestamp");
+      $this->findKey($api_data, "rates");
+      $this->matchStruct($api_data['rates'], "/^[A-Z]{3}$/", 'currencies');
+
+      $this->currencyDatabase->queryDeleteFromTable('date', date('Y-m-d'));
+      $this->currencyDatabase->queryInsertCurrencies($api_data['rates'], $api_data['timestamp']);
     }
+
+    $this->findKey($params, "symbols");
+    $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
+
+    if (empty($database_data) && !empty($params["symbols"])) {
+      $api_data = $this->fetchApi($url);
+      $this->currencyDatabase->queryInsertCurrencies($api_data['rates'], $api_data['timestamp']);
+    }
+
+    $database_data = $this->currencyDatabase->queryCurrenciesByDateRange($range, $params["symbols"]);
+
+    return $database_data;
   }
 
   /**
    * Get currencies catalog.
    */
   public function getCurrenciesCatalog(string $url = ""): array {
-    try {
-      if ($url == "") {
-        $url = $this->configs->get('currencies_catalog_url');
-      }
-
-      $response = $this->fetchApi($url);
-
-      $content = $response->getBody()->getContents();
-
-      $data = json_decode($content, TRUE);
-
-      $this->matchStruct($data, "/^[A-Z]{3}$/", 'currencies');
-
-      return $data;
+    if ($url == "") {
+      $url = $this->configs->get('currencies_catalog_url');
     }
-    catch (\Exception $e) {
-      throw $e;
-    }
+
+    $api_data = $this->fetchApi($url);
+
+    $this->matchStruct($api_data, "/^[A-Z]{3}$/", 'currencies');
+
+    return $api_data;
   }
 
   /**

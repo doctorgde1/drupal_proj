@@ -1,5 +1,5 @@
 services:
-  currency_block:
+  currency_service:
     class: Drupal\currency_exchange_rates\Service\CurrencyService
     arguments: ['@http_client', '@config.factory', '@logger.factory', '@currency_database']
   currency_database:
