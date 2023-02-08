@@ -102,14 +102,12 @@ class CurrencyService {
   /**
    * Get currencies from api.
    */
-  public function getData(string $url = "", array $params = []): array {
+  public function getData(string $url = "", int $range = 1, array $params = []): array {
     if ($url == "") {
       $url = $this->configs->get('openexchangerates_api_url');
     }
 
-    $this->findKey($params, "symbols");
-    $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
-    if (empty($database_data) && !empty($params["symbols"])) {
+    if ($url != $this->configs->get('openexchangerates_api_url')) {
       // $url = $this->addParamToUrl($url, $params);
       $api_data = $this->fetchApi($url);
 
@@ -117,10 +115,19 @@ class CurrencyService {
       $this->findKey($api_data, "rates");
       $this->matchStruct($api_data['rates'], "/^[A-Z]{3}$/", 'currencies');
 
+      $this->currencyDatabase->queryDeleteFromTable('date', date('Y-m-d'));
       $this->currencyDatabase->queryInsertCurrencies($api_data['rates'], $api_data['timestamp']);
-
     }
+
+    $this->findKey($params, "symbols");
     $database_data = $this->currencyDatabase->queryCurrenciesByDate(date('Y-m-d'), $params["symbols"]);
+
+    if (empty($database_data) && !empty($params["symbols"])) {
+      $api_data = $this->fetchApi($url);
+      $this->currencyDatabase->queryInsertCurrencies($api_data['rates'], $api_data['timestamp']);
+    }
+
+    $database_data = $this->currencyDatabase->queryCurrenciesByDateRange($range, $params["symbols"]);
 
     return $database_data;
   }
